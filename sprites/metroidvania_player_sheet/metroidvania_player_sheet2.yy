@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"a409430e-5b60-46ca-babc-deaf35b404a5","path":"sprites/metroidvania_player_sheet/metroidvania_player_sheet.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a409430e-5b60-46ca-babc-deaf35b404a5","path":"sprites/metroidvania_player_sheet/metroidvania_player_sheet.yy",},"LayerId":{"name":"4eef2b13-6e0f-4c85-adf6-f044bbb41c85","path":"sprites/metroidvania_player_sheet/metroidvania_player_sheet.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"metroidvania_player_sheet","path":"sprites/metroidvania_player_sheet/metroidvania_player_sheet.yy",},"resourceVersion":"1.0","name":"a409430e-5b60-46ca-babc-deaf35b404a5","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"a409430e-5b60-46ca-babc-deaf35b404a5","path":"sprites/metroidvania_player_sheet2/metroidvania_player_sheet2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"a409430e-5b60-46ca-babc-deaf35b404a5","path":"sprites/metroidvania_player_sheet2/metroidvania_player_sheet2.yy",},"LayerId":{"name":"4eef2b13-6e0f-4c85-adf6-f044bbb41c85","path":"sprites/metroidvania_player_sheet2/metroidvania_player_sheet2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"metroidvania_player_sheet2","path":"sprites/metroidvania_player_sheet2/metroidvania_player_sheet2.yy",},"resourceVersion":"1.0","name":"a409430e-5b60-46ca-babc-deaf35b404a5","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"metroidvania_player_sheet","path":"sprites/metroidvania_player_sheet/metroidvania_player_sheet.yy",},
+    "spriteId": {"name":"metroidvania_player_sheet2","path":"sprites/metroidvania_player_sheet2/metroidvania_player_sheet2.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"7d56a539-c19e-43d3-90f7-62eab1e133e5","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a409430e-5b60-46ca-babc-deaf35b404a5","path":"sprites/metroidvania_player_sheet/metroidvania_player_sheet.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"86319d80-3a1f-47e4-8e2f-ec77e1b83e7b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a409430e-5b60-46ca-babc-deaf35b404a5","path":"sprites/metroidvania_player_sheet2/metroidvania_player_sheet2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,9 +58,9 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"metroidvania_player_sheet","path":"sprites/metroidvania_player_sheet/metroidvania_player_sheet.yy",},
+    "parent": {"name":"metroidvania_player_sheet2","path":"sprites/metroidvania_player_sheet2/metroidvania_player_sheet2.yy",},
     "resourceVersion": "1.3",
-    "name": "metroidvania_player_sheet",
+    "name": "metroidvania_player_sheet2",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -72,7 +72,7 @@
     "path": "folders/Assets.yy",
   },
   "resourceVersion": "1.0",
-  "name": "metroidvania_player_sheet",
+  "name": "metroidvania_player_sheet2",
   "tags": [],
   "resourceType": "GMSprite",
 }
