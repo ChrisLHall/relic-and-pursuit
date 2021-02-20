@@ -3,3 +3,5 @@ GRAV = 5;
 
 xSpeed = 0;
 ySpeed = 0;
+
+inAir = false;

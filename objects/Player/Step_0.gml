@@ -4,7 +4,9 @@ key_jump = keyboard_check_pressed(vk_up);
 
 var move = key_right - key_left;
 xSpeed = move * WALK_SPEED;
+ySpeed += GRAV;
 
 
 
 x = x + xSpeed
+
