@@ -1,3 +1,5 @@
-variable = 0;
+WALK_SPEED = 5;
+GRAV = 5;
 
-/// @description Execute Code
+xSpeed = 0;
+ySpeed = 0;
