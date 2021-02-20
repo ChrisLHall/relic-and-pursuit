@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "TempPlay",
+    "path": "sprites/TempPlay/TempPlay.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
