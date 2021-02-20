@@ -1,6 +1,8 @@
 {
   "resources": [
     {"id":{"name":"micrometroidvania0x72_v2","path":"sprites/micrometroidvania0x72_v2/micrometroidvania0x72_v2.yy",},"order":0,},
+    {"id":{"name":"run","path":"sprites/run/run.yy",},"order":0,},
+    {"id":{"name":"metroidvania_player_sheet","path":"sprites/metroidvania_player_sheet/metroidvania_player_sheet.yy",},"order":1,},
     {"id":{"name":"Player","path":"objects/Player/Player.yy",},"order":0,},
     {"id":{"name":"BackgroundTileSet","path":"tilesets/BackgroundTileSet/BackgroundTileSet.yy",},"order":0,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
