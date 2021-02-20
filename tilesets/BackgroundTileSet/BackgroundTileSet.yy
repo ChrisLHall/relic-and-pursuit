@@ -1,11 +1,10 @@
 {
-  "name": "BackgroundTileSet",
   "spriteId": {
     "name": "micrometroidvania0x72_v2",
     "path": "sprites/micrometroidvania0x72_v2/micrometroidvania0x72_v2.yy",
   },
-  "tileWidth": 8,
-  "tileHeight": 8,
+  "tileWidth": 16,
+  "tileHeight": 16,
   "tilexoff": 0,
   "tileyoff": 0,
   "tilehsep": 0,
@@ -549,6 +548,7 @@
     "path": "folders/Tile Sets.yy",
   },
   "resourceVersion": "1.0",
+  "name": "BackgroundTileSet",
   "tags": [],
   "resourceType": "GMTileSet",
 }
