@@ -3,7 +3,6 @@
     {"id":{"name":"micrometroidvania0x72_v2","path":"sprites/micrometroidvania0x72_v2/micrometroidvania0x72_v2.yy",},"order":0,},
     {"id":{"name":"Hit","path":"sprites/Hit/Hit.yy",},"order":7,},
     {"id":{"name":"Run","path":"sprites/Run/Run.yy",},"order":0,},
-    {"id":{"name":"Monogram","path":"fonts/Monogram/Monogram.yy",},"order":0,},
     {"id":{"name":"Fall","path":"sprites/Fall/Fall.yy",},"order":3,},
     {"id":{"name":"ObjWallBase","path":"objects/ObjWallBase/ObjWallBase.yy",},"order":1,},
     {"id":{"name":"Slash","path":"sprites/Slash/Slash.yy",},"order":6,},
