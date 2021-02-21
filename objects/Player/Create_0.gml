@@ -7,6 +7,8 @@ xSpeed = 0;
 ySpeed = 0;
 
 inAir = false;
+// 2nd unlock
+doubleJumped = false;
 
 xKnockback = 0;
 X_KNOCKBACK_SPEED = 6;

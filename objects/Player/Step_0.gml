@@ -39,6 +39,7 @@ if (inAir) {
 			y += sign(ySpeed);	
 		}
 		inAir = false;
+		doubleJumped = false;
 		ySpeed = 0;
 	} else {
 		y += ySpeed;
@@ -48,10 +49,16 @@ if (inAir) {
 	// if we hold the "drop" key, do not include one-way colliders
 	if (!check_for_wall(x, y + 1, !key_drop)) {
 		inAir = true;
-	} else if (key_jump) {
-		inAir = true;
-		ySpeed = JUMP_SPEED;
 	}
+}
+
+if (key_jump and (!inAir or (unlocks[1] and !doubleJumped))) {
+	if (!inAir) {
+		inAir = true;
+	} else {
+		doubleJumped = true;	
+	}
+	ySpeed = JUMP_SPEED;
 }
 
 isMoving = (xSpeed != 0) or (ySpeed != 0) or isMovingFromAttack
