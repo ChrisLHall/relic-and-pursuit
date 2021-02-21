@@ -10,3 +10,6 @@ knockback_scale_x = 1;
 knockback_scale_y = 1;
 KNOCKBACK_CONSTANT = -4;
 KNOCKBACK_RECOVERY = .15;
+
+// TODO: Move to player
+player_moving = false;

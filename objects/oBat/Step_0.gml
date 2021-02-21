@@ -1,5 +1,8 @@
 // Idle
 function idle() {
+	if (!player_moving) {
+		return;
+	}
 	if (distance_to_object(Player) < aggro_range) {
 		state = state.swoop; // Switch states
 		hdir = sign(Player.x - oBat.x); // Horizontal direction to player
@@ -8,6 +11,9 @@ function idle() {
 
 // Swoop
 function swoop() {
+	if (!player_moving) {
+		return;
+	}
 	vdir = 1;
 	// Bat too high, fly down
 	if (oBat.y < Player.y - max_swoop + (Player.sprite_height + oBat.sprite_height) / 2) {
@@ -36,7 +42,19 @@ function swoop() {
 	knockback_scale_y = min(knockback_scale_y + KNOCKBACK_RECOVERY, 1);
 }
 
+if (Player.xSpeed == Player.ySpeed && Player.xSpeed == 0) {
+	player_moving = false;
+} else {
+	player_moving = true;
+}
+
+if (player_moving) {
+	sprite_set_speed(sprite_index, 4, spritespeed_framespersecond);
+} else {
+	sprite_set_speed(sprite_index, 0, spritespeed_framespersecond);
+}
+
 switch (state) {
- case state.idle: idle(); break;
- case state.swoop: swoop(); break;
+	case state.idle: idle(); break;
+	case state.swoop: swoop(); break;
 }

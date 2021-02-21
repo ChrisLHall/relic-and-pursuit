@@ -24,7 +24,7 @@
     {"id":{"name":"Floaty","path":"sprites/Floaty/Floaty.yy",},"order":1,},
     {"id":{"name":"PlayerCollisionMask","path":"sprites/PlayerCollisionMask/PlayerCollisionMask.yy",},"order":9,},
     {"id":{"name":"WallSprite","path":"sprites/WallSprite/WallSprite.yy",},"order":3,},
-    {"id":{"name":"Distant_horizon___Loop","path":"sounds/Distant_horizon___Loop/Distant_horizon___Loop.yy",},"order":3,},
+    {"id":{"name":"Distant_Horizon","path":"sounds/Distant_Horizon/Distant_Horizon.yy",},"order":0,},
     {"id":{"name":"Idle","path":"sprites/Idle/Idle.yy",},"order":1,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
   ],
