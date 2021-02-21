@@ -12,7 +12,7 @@ xSpeed = move * WALK_SPEED;
 //x = x + xSpeed
 if (place_meeting(x + xSpeed, y, ObjWallBase)) {
 	// grid align
-	x = round(x)
+	// x = round(x)
 	while (!place_meeting(x + sign(xSpeed), y, ObjWallBase)) {
 		x += sign(xSpeed);	
 	}
@@ -26,7 +26,7 @@ if (inAir) {
 	ySpeed += GRAV;
 	if (place_meeting(x, y + ySpeed, ObjWallBase)) {
 		// grid align
-		y = round(y)
+		// y = round(y)
 		while (!place_meeting(x, y + sign(ySpeed), ObjWallBase)) {
 			y += sign(ySpeed);	
 		}
@@ -37,13 +37,17 @@ if (inAir) {
 	}
 } else {
 	ySpeed = 0;
-	if (place_empty(x, y + 1)) {
+	if (!place_meeting(x, y + 1, ObjWallBase)) {
 		inAir = true;	
 	} else if (key_jump) {
 		inAir = true;
 		ySpeed = JUMP_SPEED;
 	}
 }
+
+// see if this fkn sucks
+x = round(x)
+y = round(y)
 
 // Animation and facing ////////////////////////////////////
 
@@ -70,12 +74,19 @@ if (inAir) {
 
 // Attack //////////////////////////////////////
 
-if (key_attack) {
-	var attack = instance_create_layer(x, y, layer, oPlayerAttack)
-	attack.image_xscale = image_xscale
+chargeBar = min(CHARGE_BAR_MAX, chargeBar + RECHARGE_RATE)
+if (chargeBar == CHARGE_BAR_MAX) {
+	forceRecharge = false;	
 }
 
-
+if (key_attack && chargeBar > 0 && !forceRecharge) {
+	var attack = instance_create_layer(x, y, layer, oPlayerAttack)
+	attack.image_xscale = image_xscale
+	chargeBar = max(0, chargeBar - ATTACK_DISCHARGE)
+	if (chargeBar == 0) {
+		forceRecharge = true
+	}
+}
 
 
 // TODO REMOVE
