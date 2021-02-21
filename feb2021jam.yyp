@@ -14,6 +14,7 @@
     {"id":{"name":"BackgroundTileSet","path":"tilesets/BackgroundTileSet/BackgroundTileSet.yy",},"order":0,},
     {"id":{"name":"Death","path":"sprites/Death/Death.yy",},"order":8,},
     {"id":{"name":"TempPlay","path":"sprites/TempPlay/TempPlay.yy",},"order":0,},
+    {"id":{"name":"PlayerCollisionMask","path":"sprites/PlayerCollisionMask/PlayerCollisionMask.yy",},"order":9,},
     {"id":{"name":"WallSprite","path":"sprites/WallSprite/WallSprite.yy",},"order":3,},
     {"id":{"name":"Idle","path":"sprites/Idle/Idle.yy",},"order":1,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},

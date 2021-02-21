@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "TempPlay",
-    "path": "sprites/TempPlay/TempPlay.yy",
+    "name": "Idle",
+    "path": "sprites/Idle/Idle.yy",
   },
   "solid": false,
   "visible": true,

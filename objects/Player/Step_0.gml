@@ -37,6 +37,29 @@ if (inAir) {
 	}
 }
 
+
+// Animation
+if (xSpeed > 0) {
+	image_xscale = 1	
+} else if (xSpeed < 0) {
+	image_xscale = -1
+}
+
+if (inAir) {
+	if (ySpeed < 0) {
+		sprite_index = LEAP_SPRITE;	
+	} else {
+		sprite_index = FALL_SPRITE;
+	}
+} else {
+	if (xSpeed != 0) {
+		sprite_index = RUN_SPRITE;	
+	} else {
+		sprite_index = IDLE_SPRITE;
+	}
+}
+
+
 // TODO REMOVE
 if (keyboard_check(vk_backspace)) {
 	x = xstart;
@@ -49,3 +72,4 @@ if (keyboard_check(vk_backspace)) {
 if (keyboard_check(vk_f8)) {
 	game_end();
 }
+
