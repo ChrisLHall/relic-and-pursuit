@@ -1,16 +1,19 @@
 /// @description Iframe blinking
 
-blinksRemaining -= 1
-
-if (blinksRemaining > 0) {
+if (is_invulnerable()) {
 	blinkOn = !blinkOn
 	if (blinkOn) {
 		image_alpha = 1
 	} else {
 		image_alpha = 0.25
 	}
-	alarm_set(0, BLINK_INTERVAL)
+	var timeToSet = BLINK_INTERVAL
+	// blink slower if not moving
+	if (!isMoving) {
+		timeToSet *= 4
+	}
+	alarm_set(0, timeToSet)
 } else {
 	blinkOn = true
-	image_alpha = 1	
+	image_alpha = 1
 }

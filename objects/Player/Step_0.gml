@@ -1,7 +1,7 @@
 key_left = keyboard_check(vk_left);
 key_right = keyboard_check(vk_right);
 key_jump = keyboard_check_pressed(vk_up);
-key_drop = keyboard_check(vk_down);
+key_drop = keyboard_check(vk_down) and unlocks[0];
 key_attack = keyboard_check_pressed(vk_space);
 
 // Movement //////////////////////////////////////
@@ -102,6 +102,10 @@ if (key_attack && !isMovingFromAttack && chargeBar > 0 && !forceRecharge) {
 	if (chargeBar == 0) {
 		forceRecharge = true
 	}
+}
+
+if (isMoving) {
+	invulnRemaining -= 1	
 }
 
 

@@ -20,9 +20,9 @@ isMovingFromAttack = false;
 HP_MAX = 3
 hp = HP_MAX
 BLINK_INTERVAL = 5
-INVULN_BLINKS = 20
-blinksRemaining = 0
+INVULN_TIME = 80
 blinkOn = true
+invulnRemaining = 0
 
 chargeBar = 1
 // if you use up all your power you have to wait
@@ -30,6 +30,17 @@ forceRecharge = false
 CHARGE_BAR_MAX = 1
 RECHARGE_RATE = .005
 ATTACK_DISCHARGE = .4
+
+
+// UNLOCKS
+unlocks[0] = false
+unlocks[1] = false
+unlocks[2] = false
+unlocks[3] = false
+// 0 - drop
+// 1 - double jump?
+// 2 - fast recharge
+// 3 - ?sup?er? ?att??ac?k??
 
 
 
@@ -61,13 +72,13 @@ function get_hit(attacker) {
 		xKnockback = X_KNOCKBACK_SPEED * sign(x - attacker.x)
 		ySpeed -= Y_KNOCKBACK_SPEED;
 		// start iframes
-		blinksRemaining = INVULN_BLINKS
+		invulnRemaining = INVULN_TIME
 		alarm_set(0, 1)
 	}
 }
 
 function is_invulnerable() {
-	return blinksRemaining > 0
+	return invulnRemaining > 0
 }
 
 audio_play_sound(Distant_Horizon, 10, true);

@@ -4,4 +4,5 @@ if (!UPGRADE_RECEIVED) {
 		STRING = "You have receieved the ability to drop down through thin platforms. Press Down to activate."
 	}
 	UPGRADE_RECEIVED = true;
+	other.unlocks[UPGRADE_INDEX] = true
 }
