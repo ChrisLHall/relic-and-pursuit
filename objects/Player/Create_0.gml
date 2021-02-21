@@ -8,6 +8,9 @@ ySpeed = 0;
 
 inAir = false;
 
+HP_MAX = 3
+hp = HP_MAX
+
 
 chargeBar = 1
 // if you use up all your power you have to wait

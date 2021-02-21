@@ -17,3 +17,8 @@ if (chargeBar < CHARGE_BAR_MAX) {
 	draw_rectangle(x - WIDTH / 2, y - 48, x + WIDTH * (chargeBar / CHARGE_BAR_MAX - .5), y - 44, false)
 }
 
+
+var PIP_SPACING = 30
+for (var i = 0; i < HP_MAX; i++) {
+	draw_sprite_ext(sHealthPip, hp > i, x - PIP_SPACING * (-(HP_MAX - 1) / 2 + i), y + 60, 2, 2, 0, c_white, 1)
+}

@@ -16,6 +16,7 @@
     {"id":{"name":"Player","path":"objects/Player/Player.yy",},"order":0,},
     {"id":{"name":"Push","path":"sprites/Push/Push.yy",},"order":4,},
     {"id":{"name":"WallSpriteOneWay","path":"sprites/WallSpriteOneWay/WallSpriteOneWay.yy",},"order":5,},
+    {"id":{"name":"sHealthPip","path":"sprites/sHealthPip/sHealthPip.yy",},"order":6,},
     {"id":{"name":"Baby_Boxer_Sheet","path":"sprites/Baby_Boxer_Sheet/Baby_Boxer_Sheet.yy",},"order":3,},
     {"id":{"name":"BackgroundTileSet","path":"tilesets/BackgroundTileSet/BackgroundTileSet.yy",},"order":0,},
     {"id":{"name":"Death","path":"sprites/Death/Death.yy",},"order":8,},
