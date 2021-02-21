@@ -10,6 +10,7 @@
     {"id":{"name":"Slash","path":"sprites/Slash/Slash.yy",},"order":6,},
     {"id":{"name":"Leap","path":"sprites/Leap/Leap.yy",},"order":2,},
     {"id":{"name":"metroidvania_player_sheet","path":"sprites/metroidvania_player_sheet/metroidvania_player_sheet.yy",},"order":1,},
+    {"id":{"name":"oBat","path":"objects/oBat/oBat.yy",},"order":2,},
     {"id":{"name":"Swing","path":"sprites/Swing/Swing.yy",},"order":5,},
     {"id":{"name":"Player","path":"objects/Player/Player.yy",},"order":0,},
     {"id":{"name":"Push","path":"sprites/Push/Push.yy",},"order":4,},
