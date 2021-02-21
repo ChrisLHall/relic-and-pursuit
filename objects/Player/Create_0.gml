@@ -26,6 +26,8 @@ INVULN_TIME = 80
 blinkOn = true
 invulnRemaining = 0
 
+dead = false
+
 chargeBar = 1
 // if you use up all your power you have to wait
 forceRecharge = false 
@@ -69,17 +71,27 @@ function check_for_wall(xPos, yPos, includeOneWay) {
 
 
 function get_hit(attacker, doXKnockback, doYKnockback) {
-	if (!is_invulnerable()) {
+	if (!is_invulnerable() && !dead) {
 		hp = max(0, hp - attacker.DAMAGE)
-		if (doXKnockback) {
-			xKnockback = X_KNOCKBACK_SPEED * sign(x - attacker.x)
+		if (hp > 0) {
+			if (doXKnockback) {
+				xKnockback = X_KNOCKBACK_SPEED * sign(x - attacker.x)
+			}
+			if (doYKnockback) {
+				ySpeed -= Y_KNOCKBACK_SPEED;
+			}
+			// start iframes
+			invulnRemaining = INVULN_TIME
+			alarm_set(0, 1)
+		} else {
+			// die
+			dead = true
+			invulnRemaining = 0
+			chargeBar = CHARGE_BAR_MAX
+			// game restarts after this anim finishes
+			sprite_index = Death
+			image_index = 0
 		}
-		if (doYKnockback) {
-			ySpeed -= Y_KNOCKBACK_SPEED;
-		}
-		// start iframes
-		invulnRemaining = INVULN_TIME
-		alarm_set(0, 1)
 	}
 }
 

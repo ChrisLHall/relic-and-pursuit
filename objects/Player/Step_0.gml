@@ -10,55 +10,63 @@ var move = key_right - key_left;
 var tryingToRun = key_right || key_left;
 xSpeed = move * WALK_SPEED + xKnockback;
 
-//x = x + xSpeed
-if (check_for_wall(x + xSpeed, y, true)) {
-	// grid align
-	// x = round(x)
-	while (!check_for_wall(x + sign(xSpeed), y, true)) {
-		x += sign(xSpeed);	
-	}
-	xSpeed = 0;
-	xKnockback = 0;
-} else {
-	x += xSpeed;
-	if (xKnockback > 0) {
-		xKnockback = max(0, xKnockback - X_KNOCKBACK_RECOVERY)
-	} else if (xKnockback < 0) {
-		xKnockback = min(0, xKnockback + X_KNOCKBACK_RECOVERY)
-	}
-}
-
-
-if (inAir) {
-	ySpeed = min(TERMINAL_VELOCITY, ySpeed + GRAV);
-	// if we hold the "drop" key, do not include one-way colliders
-	if (check_for_wall(x, y + ySpeed, !key_drop)) {
+if (!dead) {
+	//x = x + xSpeed
+	if (check_for_wall(x + xSpeed, y, true)) {
 		// grid align
-		// y = round(y)
-		while (!check_for_wall(x, y + sign(ySpeed), true)) {
-			y += sign(ySpeed);	
+		// x = round(x)
+		while (!check_for_wall(x + sign(xSpeed), y, true)) {
+			x += sign(xSpeed);	
 		}
-		inAir = false;
-		doubleJumped = false;
-		ySpeed = 0;
+		xSpeed = 0;
+		xKnockback = 0;
 	} else {
-		y += ySpeed;
+		x += xSpeed;
+		if (xKnockback > 0) {
+			xKnockback = max(0, xKnockback - X_KNOCKBACK_RECOVERY)
+		} else if (xKnockback < 0) {
+			xKnockback = min(0, xKnockback + X_KNOCKBACK_RECOVERY)
+		}
+	}
+
+
+	if (inAir) {
+		ySpeed = min(TERMINAL_VELOCITY, ySpeed + GRAV);
+		// if we hold the "drop" key, do not include one-way colliders
+		if (check_for_wall(x, y + ySpeed, !key_drop)) {
+			// grid align
+			// y = round(y)
+			while (!check_for_wall(x, y + sign(ySpeed), true)) {
+				y += sign(ySpeed);	
+			}
+			inAir = false;
+			doubleJumped = false;
+			ySpeed = 0;
+		} else {
+			y += ySpeed;
+		}
+	} else {
+		ySpeed = 0;
+		// if we hold the "drop" key, do not include one-way colliders
+		if (!check_for_wall(x, y + 1, !key_drop)) {
+			inAir = true;
+		}
+	}
+
+	if (key_jump and (!inAir or (unlocks[1] and !doubleJumped))) {
+		if (!inAir) {
+			inAir = true;
+		} else {
+			doubleJumped = true;	
+		}
+		ySpeed = JUMP_SPEED;
 	}
 } else {
-	ySpeed = 0;
-	// if we hold the "drop" key, do not include one-way colliders
-	if (!check_for_wall(x, y + 1, !key_drop)) {
-		inAir = true;
-	}
-}
-
-if (key_jump and (!inAir or (unlocks[1] and !doubleJumped))) {
-	if (!inAir) {
-		inAir = true;
-	} else {
-		doubleJumped = true;	
-	}
-	ySpeed = JUMP_SPEED;
+	// if dead
+	move = 0
+	tryingToRun = false
+	xSpeed = 0
+	ySpeed = 0
 }
 
 isMoving = (xSpeed != 0) or (ySpeed != 0) or isMovingFromAttack
@@ -76,20 +84,21 @@ if (move > 0) {
 	image_xscale = -1
 }
 
-if (inAir) {
-	if (ySpeed < 0) {
-		sprite_index = LEAP_SPRITE;	
+if (!dead) {
+	if (inAir) {
+		if (ySpeed < 0) {
+			sprite_index = LEAP_SPRITE;	
+		} else {
+			sprite_index = FALL_SPRITE;
+		}
 	} else {
-		sprite_index = FALL_SPRITE;
-	}
-} else {
-	if (tryingToRun) {
-		sprite_index = RUN_SPRITE;	
-	} else {
-		sprite_index = IDLE_SPRITE;
+		if (tryingToRun) {
+			sprite_index = RUN_SPRITE;	
+		} else {
+			sprite_index = IDLE_SPRITE;
+		}
 	}
 }
-
 
 // Attack //////////////////////////////////////
 
@@ -100,7 +109,7 @@ if (isMoving) {
 	}
 }
 
-if (key_attack && !isMovingFromAttack && chargeBar > 0 && !forceRecharge) {
+if (key_attack && !dead && !isMovingFromAttack && chargeBar > 0 && !forceRecharge) {
 	var attack = instance_create_layer(x, y, layer, oPlayerAttack)
 	attack.image_xscale = image_xscale
 	
@@ -118,15 +127,8 @@ if (isMoving) {
 }
 
 
-// TODO REMOVE
-if (keyboard_check(vk_backspace)) {
-	x = xstart;
-	y = ystart;
-	xSpeed = 0;
-	ySpeed = 0;
-}
 
-// TODO MOVE THIS ELSEWHERE?
+
 if (keyboard_check(vk_f8)) {
 	game_end();
 }
