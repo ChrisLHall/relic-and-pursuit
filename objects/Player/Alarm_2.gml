@@ -1,3 +1,3 @@
 /// @description Restart on death
 
-room_restart()
+game_restart()

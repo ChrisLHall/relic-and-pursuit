@@ -11,6 +11,6 @@ MESSAGES = [
 
 SOUNDS = [
 	controlroom,
-	ambiancebass,
-	event1
+	event1,
+	ambiancebass
 ]
