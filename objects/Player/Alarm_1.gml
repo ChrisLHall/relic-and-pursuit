@@ -1,0 +1,3 @@
+/// @description isMovingFromAttack
+
+isMovingFromAttack = false

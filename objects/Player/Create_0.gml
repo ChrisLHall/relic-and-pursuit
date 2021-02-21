@@ -13,7 +13,9 @@ X_KNOCKBACK_SPEED = 6;
 X_KNOCKBACK_RECOVERY = .3;
 Y_KNOCKBACK_SPEED = 4;
 
+// read externally
 isMoving = false;
+isMovingFromAttack = false;
 
 HP_MAX = 3
 hp = HP_MAX
@@ -27,7 +29,7 @@ chargeBar = 1
 forceRecharge = false 
 CHARGE_BAR_MAX = 1
 RECHARGE_RATE = .005
-ATTACK_DISCHARGE = .25
+ATTACK_DISCHARGE = .4
 
 
 

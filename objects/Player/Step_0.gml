@@ -54,7 +54,7 @@ if (inAir) {
 	}
 }
 
-isMoving = xSpeed or ySpeed
+isMoving = (xSpeed != 0) or (ySpeed != 0) or isMovingFromAttack
 
 x = round(x)
 y = round(y)
@@ -91,9 +91,13 @@ if (chargeBar == CHARGE_BAR_MAX) {
 	forceRecharge = false;	
 }
 
-if (key_attack && chargeBar > 0 && !forceRecharge) {
+if (key_attack && !isMovingFromAttack && chargeBar > 0 && !forceRecharge) {
 	var attack = instance_create_layer(x, y, layer, oPlayerAttack)
 	attack.image_xscale = image_xscale
+	
+	isMovingFromAttack = true
+	alarm_set(1, 15)
+	
 	chargeBar = max(0, chargeBar - ATTACK_DISCHARGE)
 	if (chargeBar == 0) {
 		forceRecharge = true
