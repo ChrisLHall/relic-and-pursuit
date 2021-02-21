@@ -1,6 +1,6 @@
 // Idle
 function idle() {
-	if (!player_moving) {
+	if (!Player.isMoving) {
 		return;
 	}
 	if (distance_to_object(Player) < aggro_range) {
@@ -11,7 +11,7 @@ function idle() {
 
 // Swoop
 function swoop() {
-	if (!player_moving) {
+	if (!Player.isMoving) {
 		return;
 	}
 	vdir = 1;
@@ -42,13 +42,7 @@ function swoop() {
 	knockback_scale_y = min(knockback_scale_y + KNOCKBACK_RECOVERY, 1);
 }
 
-if (Player.xSpeed == Player.ySpeed && Player.xSpeed == 0) {
-	player_moving = false;
-} else {
-	player_moving = true;
-}
-
-if (player_moving) {
+if (Player.isMoving) {
 	sprite_set_speed(sprite_index, 4, spritespeed_framespersecond);
 } else {
 	sprite_set_speed(sprite_index, 0, spritespeed_framespersecond);
