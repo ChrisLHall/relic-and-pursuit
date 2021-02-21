@@ -1,8 +1,8 @@
-enum state { idle, swoop };
+enum state { idle, swoop, gohome };
 max_swoop = 8;
 turn_distance = 10;
 aggro_range = 180;
-safe_distance = 500;
+safe_distance = 360;
 state = state.idle;
 speed_scale = 2;
 
