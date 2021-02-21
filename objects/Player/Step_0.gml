@@ -54,6 +54,8 @@ if (inAir) {
 	}
 }
 
+isMoving = xSpeed or ySpeed
+
 x = round(x)
 y = round(y)
 
