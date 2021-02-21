@@ -6,6 +6,7 @@
     {"id":{"name":"Bat","path":"sprites/Bat/Bat.yy",},"order":0,},
     {"id":{"name":"Run","path":"sprites/Run/Run.yy",},"order":0,},
     {"id":{"name":"Fall","path":"sprites/Fall/Fall.yy",},"order":3,},
+    {"id":{"name":"snd_upgrade","path":"sounds/snd_upgrade/snd_upgrade.yy",},"order":1,},
     {"id":{"name":"oWallOneWay","path":"objects/oWallOneWay/oWallOneWay.yy",},"order":3,},
     {"id":{"name":"industrial_v2","path":"sprites/industrial_v2/industrial_v2.yy",},"order":2,},
     {"id":{"name":"oWallBase","path":"objects/oWallBase/oWallBase.yy",},"order":1,},
