@@ -4,7 +4,7 @@ function idle() {
 		return;
 	}
 	if (distance_to_object(Player) < aggro_range) {
-		state = state.swoop; // Switch states
+		state = batstates.swoop; // Switch states
 		audio_play_sound(bat_aggro, 10, false)
 	}
 }
@@ -33,7 +33,7 @@ function swoop() {
 	
 	// give up if too far away
 	if (dist > safe_distance) {
-		state = state.gohome;
+		state = batstates.gohome;
 		knockback_scale_x = 1;
 		knockback_scale_y = 1;
 	}
@@ -59,13 +59,13 @@ function gohome() {
 }
 
 if (Player.isMoving) {
-	sprite_set_speed(sprite_index, 4, spritespeed_framespersecond);
+	image_speed = 1
 } else {
-	sprite_set_speed(sprite_index, 0, spritespeed_framespersecond);
+	image_speed = 0
 }
 
 switch (state) {
-	case state.idle: idle(); break;
-	case state.swoop: swoop(); break;
-	case state.gohome: gohome(); break;
+	case batstates.idle: idle(); break;
+	case batstates.swoop: swoop(); break;
+	case batstates.gohome: gohome(); break;
 }

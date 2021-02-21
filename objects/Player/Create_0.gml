@@ -1,3 +1,6 @@
+randomise()
+
+
 WALK_SPEED = 5;
 GRAV = .5;
 JUMP_SPEED = -10;
