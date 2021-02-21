@@ -1,10 +1,10 @@
 {
   "spriteId": {
-    "name": "Slash",
-    "path": "sprites/Slash/Slash.yy",
+    "name": "WallSprite",
+    "path": "sprites/WallSprite/WallSprite.yy",
   },
-  "solid": false,
-  "visible": true,
+  "solid": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -20,10 +20,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":7,"eventType":7,"collisionObjectId":null,"parent":{"name":"oPlayerAttack","path":"objects/oPlayerAttack/oPlayerAttack.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oPlayerAttack","path":"objects/oPlayerAttack/oPlayerAttack.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -31,7 +28,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oPlayerAttack",
+  "name": "oWallBase",
   "tags": [],
   "resourceType": "GMObject",
 }
