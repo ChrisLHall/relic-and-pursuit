@@ -22,3 +22,5 @@ IDLE_SPRITE = Idle
 RUN_SPRITE = Run
 LEAP_SPRITE = Leap
 FALL_SPRITE = Fall
+
+audio_play_sound(Distant_Horizon, 10, true);
