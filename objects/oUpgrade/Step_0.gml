@@ -9,7 +9,7 @@ if (UPGRADE_INDEX == 0) {
 		TIMER -= 1;
 	}
 	if (TIMER == 0) {
-		audio_play_sound(controlroom, 12, true);
+		audio_play_sound(SOUNDS[0], 12, true);
 		TIMER -= 100;
 	}
 }
