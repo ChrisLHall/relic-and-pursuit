@@ -8,6 +8,8 @@ xSpeed = move * WALK_SPEED;
 
 //x = x + xSpeed
 if (place_meeting(x + xSpeed, y, ObjWallBase)) {
+	// grid align
+	x = round(x)
 	while (!place_meeting(x + sign(xSpeed), y, ObjWallBase)) {
 		x += sign(xSpeed);	
 	}
@@ -20,6 +22,8 @@ if (place_meeting(x + xSpeed, y, ObjWallBase)) {
 if (inAir) {
 	ySpeed += GRAV;
 	if (place_meeting(x, y + ySpeed, ObjWallBase)) {
+		// grid align
+		y = round(y)
 		while (!place_meeting(x, y + sign(ySpeed), ObjWallBase)) {
 			y += sign(ySpeed);	
 		}
