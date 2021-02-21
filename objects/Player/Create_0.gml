@@ -1,6 +1,7 @@
 WALK_SPEED = 5;
 GRAV = .5;
 JUMP_SPEED = -10;
+TERMINAL_VELOCITY = 12;
 
 xSpeed = 0;
 ySpeed = 0;
@@ -24,11 +25,11 @@ LEAP_SPRITE = Leap
 FALL_SPRITE = Fall
 
 
-function check_for_wall(xPos, yPos) {
+function check_for_wall(xPos, yPos, includeOneWay) {
 	if (place_meeting(xPos, yPos, oWallBase)) {
 		return true;	
 	}
-	if ((ySpeed >= 0 or !inAir) && place_meeting(xPos, yPos, oWallOneWay)) {
+	if (includeOneWay and (ySpeed >= 0 or !inAir) and place_meeting(xPos, yPos, oWallOneWay)) {
 		// see if we are above the wall
 		var wallInstance = instance_place(xPos, yPos, oWallOneWay)
 		if (wallInstance.bbox_top >= y) {

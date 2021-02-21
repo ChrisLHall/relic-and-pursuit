@@ -1,6 +1,7 @@
 key_left = keyboard_check(vk_left);
 key_right = keyboard_check(vk_right);
 key_jump = keyboard_check_pressed(vk_up);
+key_drop = keyboard_check(vk_down);
 key_attack = keyboard_check_pressed(vk_space);
 
 // Movement //////////////////////////////////////
@@ -10,10 +11,10 @@ var tryingToRun = key_right || key_left;
 xSpeed = move * WALK_SPEED;
 
 //x = x + xSpeed
-if (check_for_wall(x + xSpeed, y)) {
+if (check_for_wall(x + xSpeed, y, true)) {
 	// grid align
 	// x = round(x)
-	while (!check_for_wall(x + sign(xSpeed), y)) {
+	while (!check_for_wall(x + sign(xSpeed), y, true)) {
 		x += sign(xSpeed);	
 	}
 	xSpeed = 0;
@@ -23,11 +24,12 @@ if (check_for_wall(x + xSpeed, y)) {
 
 
 if (inAir) {
-	ySpeed += GRAV;
-	if (check_for_wall(x, y + ySpeed)) {
+	ySpeed = min(TERMINAL_VELOCITY, ySpeed + GRAV);
+	// if we hold the "drop" key, do not include one-way colliders
+	if (check_for_wall(x, y + ySpeed, !key_drop)) {
 		// grid align
 		// y = round(y)
-		while (!check_for_wall(x, y + sign(ySpeed))) {
+		while (!check_for_wall(x, y + sign(ySpeed), true)) {
 			y += sign(ySpeed);	
 		}
 		inAir = false;
@@ -37,15 +39,15 @@ if (inAir) {
 	}
 } else {
 	ySpeed = 0;
-	if (!check_for_wall(x, y + 1)) {
-		inAir = true;	
+	// if we hold the "drop" key, do not include one-way colliders
+	if (!check_for_wall(x, y + 1, !key_drop)) {
+		inAir = true;
 	} else if (key_jump) {
 		inAir = true;
 		ySpeed = JUMP_SPEED;
 	}
 }
 
-// see if this fkn sucks
 x = round(x)
 y = round(y)
 
