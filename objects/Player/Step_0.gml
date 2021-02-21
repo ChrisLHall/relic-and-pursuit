@@ -1,6 +1,9 @@
 key_left = keyboard_check(vk_left);
 key_right = keyboard_check(vk_right);
 key_jump = keyboard_check_pressed(vk_up);
+key_attack = keyboard_check_pressed(vk_space);
+
+// Movement //////////////////////////////////////
 
 var move = key_right - key_left;
 var tryingToRun = key_right || key_left;
@@ -42,8 +45,8 @@ if (inAir) {
 	}
 }
 
+// Animation and facing ////////////////////////////////////
 
-// Animation
 if (xSpeed > 0) {
 	image_xscale = 1	
 } else if (xSpeed < 0) {
@@ -63,6 +66,16 @@ if (inAir) {
 		sprite_index = IDLE_SPRITE;
 	}
 }
+
+
+// Attack //////////////////////////////////////
+
+if (key_attack) {
+	var attack = instance_create_layer(x, y, layer, oPlayerAttack)
+	attack.image_xscale = image_xscale
+}
+
+
 
 
 // TODO REMOVE

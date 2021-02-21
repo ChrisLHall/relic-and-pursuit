@@ -17,6 +17,7 @@
     {"id":{"name":"Death","path":"sprites/Death/Death.yy",},"order":8,},
     {"id":{"name":"FloatyShoot","path":"sprites/FloatyShoot/FloatyShoot.yy",},"order":2,},
     {"id":{"name":"TempPlay","path":"sprites/TempPlay/TempPlay.yy",},"order":0,},
+    {"id":{"name":"oPlayerAttack","path":"objects/oPlayerAttack/oPlayerAttack.yy",},"order":2,},
     {"id":{"name":"Floaty","path":"sprites/Floaty/Floaty.yy",},"order":1,},
     {"id":{"name":"PlayerCollisionMask","path":"sprites/PlayerCollisionMask/PlayerCollisionMask.yy",},"order":9,},
     {"id":{"name":"WallSprite","path":"sprites/WallSprite/WallSprite.yy",},"order":3,},
