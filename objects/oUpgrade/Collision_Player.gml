@@ -1,2 +1,7 @@
-draw_set_alpha(1);
-draw_set_colour(c_white);
+if (!UPGRADE_RECEIVED) {
+	inst = instance_create_layer(x, y, layer, oDrawText);
+	with (inst) {
+		STRING = "You have receieved the ability to drop down through thin platforms. Press Down to activate."
+	}
+	UPGRADE_RECEIVED = true;
+}
