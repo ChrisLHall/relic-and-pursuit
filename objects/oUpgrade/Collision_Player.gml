@@ -7,4 +7,8 @@ if (!UPGRADE_RECEIVED) {
 	}
 	UPGRADE_RECEIVED = true;
 	other.unlocks[UPGRADE_INDEX] = true
+	var cacheGain = audio_sound_get_gain(SOUNDS[UPGRADE_INDEX]);
+	audio_sound_gain(SOUNDS[UPGRADE_INDEX], 0, 0);
+	audio_play_sound(SOUNDS[UPGRADE_INDEX], 12, true);
+	audio_sound_gain(SOUNDS[UPGRADE_INDEX], cacheGain, 15000); // 15 seconds
 }

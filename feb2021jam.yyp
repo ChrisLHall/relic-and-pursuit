@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"bboxer_aggro","path":"sounds/bboxer_aggro/bboxer_aggro.yy",},"order":6,},
+    {"id":{"name":"event1","path":"sounds/event1/event1.yy",},"order":9,},
     {"id":{"name":"BBoxer_Teleport","path":"sprites/BBoxer_Teleport/BBoxer_Teleport.yy",},"order":10,},
     {"id":{"name":"micrometroidvania0x72_v2","path":"sprites/micrometroidvania0x72_v2/micrometroidvania0x72_v2.yy",},"order":0,},
     {"id":{"name":"Hit","path":"sprites/Hit/Hit.yy",},"order":7,},
@@ -32,6 +33,7 @@
     {"id":{"name":"WallSpriteOneWay","path":"sprites/WallSpriteOneWay/WallSpriteOneWay.yy",},"order":4,},
     {"id":{"name":"sHealthPip","path":"sprites/sHealthPip/sHealthPip.yy",},"order":5,},
     {"id":{"name":"BBoxer_Die","path":"sprites/BBoxer_Die/BBoxer_Die.yy",},"order":11,},
+    {"id":{"name":"ambiancebass","path":"sounds/ambiancebass/ambiancebass.yy",},"order":8,},
     {"id":{"name":"BackgroundTileSet","path":"tilesets/BackgroundTileSet/BackgroundTileSet.yy",},"order":0,},
     {"id":{"name":"BBoxer_Sheet","path":"sprites/BBoxer_Sheet/BBoxer_Sheet.yy",},"order":3,},
     {"id":{"name":"Death","path":"sprites/Death/Death.yy",},"order":8,},
