@@ -10,10 +10,10 @@ var tryingToRun = key_right || key_left;
 xSpeed = move * WALK_SPEED;
 
 //x = x + xSpeed
-if (place_meeting(x + xSpeed, y, ObjWallBase)) {
+if (check_for_wall(x + xSpeed, y)) {
 	// grid align
 	// x = round(x)
-	while (!place_meeting(x + sign(xSpeed), y, ObjWallBase)) {
+	while (!check_for_wall(x + sign(xSpeed), y)) {
 		x += sign(xSpeed);	
 	}
 	xSpeed = 0;
@@ -24,10 +24,10 @@ if (place_meeting(x + xSpeed, y, ObjWallBase)) {
 
 if (inAir) {
 	ySpeed += GRAV;
-	if (place_meeting(x, y + ySpeed, ObjWallBase)) {
+	if (check_for_wall(x, y + ySpeed)) {
 		// grid align
 		// y = round(y)
-		while (!place_meeting(x, y + sign(ySpeed), ObjWallBase)) {
+		while (!check_for_wall(x, y + sign(ySpeed))) {
 			y += sign(ySpeed);	
 		}
 		inAir = false;
@@ -37,7 +37,7 @@ if (inAir) {
 	}
 } else {
 	ySpeed = 0;
-	if (!place_meeting(x, y + 1, ObjWallBase)) {
+	if (!check_for_wall(x, y + 1)) {
 		inAir = true;	
 	} else if (key_jump) {
 		inAir = true;

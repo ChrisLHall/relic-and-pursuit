@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "WallSprite",
-    "path": "sprites/WallSprite/WallSprite.yy",
+    "name": "WallSpriteOneWay",
+    "path": "sprites/WallSpriteOneWay/WallSpriteOneWay.yy",
   },
   "solid": true,
   "visible": false,
@@ -28,7 +28,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "ObjWallBase",
+  "name": "oWallOneWay",
   "tags": [],
   "resourceType": "GMObject",
 }
