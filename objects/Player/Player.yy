@@ -5,7 +5,10 @@
   },
   "solid": false,
   "visible": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "PlayerCollisionMask",
+    "path": "sprites/PlayerCollisionMask/PlayerCollisionMask.yy",
+  },
   "persistent": false,
   "parentObjectId": null,
   "physicsObject": false,

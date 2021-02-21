@@ -3,6 +3,7 @@ key_right = keyboard_check(vk_right);
 key_jump = keyboard_check_pressed(vk_up);
 
 var move = key_right - key_left;
+var tryingToRun = key_right || key_left;
 xSpeed = move * WALK_SPEED;
 
 //x = x + xSpeed
@@ -52,7 +53,7 @@ if (inAir) {
 		sprite_index = FALL_SPRITE;
 	}
 } else {
-	if (xSpeed != 0) {
+	if (tryingToRun) {
 		sprite_index = RUN_SPRITE;	
 	} else {
 		sprite_index = IDLE_SPRITE;
