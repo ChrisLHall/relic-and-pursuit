@@ -51,6 +51,8 @@ if (inAir) {
 x = round(x)
 y = round(y)
 
+camera_set_view_pos(view_camera[0], x - 180, y - 240)
+
 // Animation and facing ////////////////////////////////////
 
 if (xSpeed > 0) {
