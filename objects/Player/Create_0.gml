@@ -68,11 +68,15 @@ function check_for_wall(xPos, yPos, includeOneWay) {
 }
 
 
-function get_hit(attacker) {
+function get_hit(attacker, doXKnockback, doYKnockback) {
 	if (!is_invulnerable()) {
 		hp = max(0, hp - attacker.DAMAGE)
-		xKnockback = X_KNOCKBACK_SPEED * sign(x - attacker.x)
-		ySpeed -= Y_KNOCKBACK_SPEED;
+		if (doXKnockback) {
+			xKnockback = X_KNOCKBACK_SPEED * sign(x - attacker.x)
+		}
+		if (doYKnockback) {
+			ySpeed -= Y_KNOCKBACK_SPEED;
+		}
 		// start iframes
 		invulnRemaining = INVULN_TIME
 		alarm_set(0, 1)

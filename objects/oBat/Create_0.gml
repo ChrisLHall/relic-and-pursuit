@@ -13,5 +13,8 @@ KNOCKBACK_RECOVERY = .15;
 
 DAMAGE = 1
 
+hp = 3
+invulnerable = false
+
 // TODO: Move to player
 player_moving = false;
