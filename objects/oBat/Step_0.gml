@@ -5,7 +5,7 @@ function idle() {
 	}
 	if (distance_to_object(Player) < aggro_range) {
 		state = state.swoop; // Switch states
-		hdir = sign(Player.x - oBat.x); // Horizontal direction to player
+		audio_play_sound(bat_aggro, 10, false)
 	}
 }
 
@@ -14,16 +14,7 @@ function swoop() {
 	if (!Player.isMoving) {
 		return;
 	}
-	vdir = 1;
-	// Bat too high, fly down
-	if (oBat.y < Player.y - max_swoop + (Player.sprite_height + oBat.sprite_height) / 2) {
-		vdir = 1;
-	}
-	// Bat too low, fly up
-	if (oBat.y > Player.y + max_swoop - (Player.sprite_height + oBat.sprite_height) / 2) {
-		vdir = -1;
-	}
-
+	
 	dir = point_direction(x, y, Player.x, Player.y - Player.sprite_height / 2);
 	dist = point_distance(x, y, Player.x, Player.y - Player.sprite_height / 2);
 	if (dist > 2 * speed_scale) {
@@ -32,14 +23,39 @@ function swoop() {
 	}
 	
 	// Reverse direction if necessary
-	if ((abs(Player.x - oBat.x) > turn_distance) && (sign(Player.x - oBat.x) == -hdir)) {
-		hdir = -hdir;
-		image_xscale *= -1
+	if ((abs(Player.x - oBat.x) > turn_distance) && (-sign(Player.x - oBat.x) != image_xscale)) {
+		image_xscale = -sign(Player.x - oBat.x)
 	}
 	
 	// Recover from knockback
 	knockback_scale_x = min(knockback_scale_x + KNOCKBACK_RECOVERY, 1);
 	knockback_scale_y = min(knockback_scale_y + KNOCKBACK_RECOVERY, 1);
+	
+	// give up if too far away
+	if (dist > safe_distance) {
+		state = state.gohome;
+		knockback_scale_x = 1;
+		knockback_scale_y = 1;
+	}
+}
+
+function gohome() {
+	if (!Player.isMoving) {
+		return;
+	}
+	
+	dir = point_direction(x, y, xstart, ystart);
+	dist = point_distance(x, y, xstart, ystart);
+	if (dist > 2 * speed_scale) {
+		x += dcos(dir) * speed_scale;
+		y -= dsin(dir) * speed_scale;
+	} else {
+		// made it home
+		state = state.idle
+	}	
+	
+	// Reverse direction if necessary
+	image_xscale = -sign(dcos(dir))
 }
 
 if (Player.isMoving) {
@@ -51,4 +67,5 @@ if (Player.isMoving) {
 switch (state) {
 	case state.idle: idle(); break;
 	case state.swoop: swoop(); break;
+	case state.gohome: gohome(); break;
 }
