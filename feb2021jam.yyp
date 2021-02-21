@@ -5,6 +5,7 @@
     {"id":{"name":"sUpgradeReceived","path":"sprites/sUpgradeReceived/sUpgradeReceived.yy",},"order":7,},
     {"id":{"name":"Bat","path":"sprites/Bat/Bat.yy",},"order":0,},
     {"id":{"name":"Run","path":"sprites/Run/Run.yy",},"order":0,},
+    {"id":{"name":"controlroom","path":"sounds/controlroom/controlroom.yy",},"order":2,},
     {"id":{"name":"Fall","path":"sprites/Fall/Fall.yy",},"order":3,},
     {"id":{"name":"snd_upgrade","path":"sounds/snd_upgrade/snd_upgrade.yy",},"order":1,},
     {"id":{"name":"oWallOneWay","path":"objects/oWallOneWay/oWallOneWay.yy",},"order":3,},
