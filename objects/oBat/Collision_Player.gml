@@ -1,0 +1,1 @@
+other.get_hit(self)

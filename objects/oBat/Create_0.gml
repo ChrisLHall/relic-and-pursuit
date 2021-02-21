@@ -11,5 +11,7 @@ knockback_scale_y = 1;
 KNOCKBACK_CONSTANT = -4;
 KNOCKBACK_RECOVERY = .15;
 
+DAMAGE = 1
+
 // TODO: Move to player
 player_moving = false;

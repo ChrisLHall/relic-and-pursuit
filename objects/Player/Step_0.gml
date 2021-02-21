@@ -8,7 +8,7 @@ key_attack = keyboard_check_pressed(vk_space);
 
 var move = key_right - key_left;
 var tryingToRun = key_right || key_left;
-xSpeed = move * WALK_SPEED;
+xSpeed = move * WALK_SPEED + xKnockback;
 
 //x = x + xSpeed
 if (check_for_wall(x + xSpeed, y, true)) {
@@ -18,8 +18,14 @@ if (check_for_wall(x + xSpeed, y, true)) {
 		x += sign(xSpeed);	
 	}
 	xSpeed = 0;
+	xKnockback = 0;
 } else {
 	x += xSpeed;
+	if (xKnockback > 0) {
+		xKnockback = max(0, xKnockback - X_KNOCKBACK_RECOVERY)
+	} else if (xKnockback < 0) {
+		xKnockback = min(0, xKnockback + X_KNOCKBACK_RECOVERY)
+	}
 }
 
 
@@ -55,9 +61,9 @@ camera_set_view_pos(view_camera[0], x - 180, y - 240)
 
 // Animation and facing ////////////////////////////////////
 
-if (xSpeed > 0) {
+if (move > 0) {
 	image_xscale = 1	
-} else if (xSpeed < 0) {
+} else if (move < 0) {
 	image_xscale = -1
 }
 

@@ -8,9 +8,17 @@ ySpeed = 0;
 
 inAir = false;
 
+xKnockback = 0;
+X_KNOCKBACK_SPEED = 6;
+X_KNOCKBACK_RECOVERY = .3;
+Y_KNOCKBACK_SPEED = 4;
+
 HP_MAX = 3
 hp = HP_MAX
-
+BLINK_INTERVAL = 5
+INVULN_BLINKS = 20
+blinksRemaining = 0
+blinkOn = true
 
 chargeBar = 1
 // if you use up all your power you have to wait
@@ -40,6 +48,22 @@ function check_for_wall(xPos, yPos, includeOneWay) {
 		}
 	}
 	return false;
+}
+
+
+function get_hit(attacker) {
+	if (!is_invulnerable()) {
+		hp = max(0, hp - attacker.DAMAGE)
+		xKnockback = X_KNOCKBACK_SPEED * sign(x - attacker.x)
+		ySpeed -= Y_KNOCKBACK_SPEED;
+		// start iframes
+		blinksRemaining = INVULN_BLINKS
+		alarm_set(0, 1)
+	}
+}
+
+function is_invulnerable() {
+	return blinksRemaining > 0
 }
 
 audio_play_sound(Distant_Horizon, 10, true);
