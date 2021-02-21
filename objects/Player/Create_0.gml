@@ -38,3 +38,5 @@ function check_for_wall(xPos, yPos, includeOneWay) {
 	}
 	return false;
 }
+
+audio_play_sound(Distant_Horizon, 10, true);
