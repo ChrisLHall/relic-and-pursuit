@@ -93,9 +93,11 @@ if (inAir) {
 
 // Attack //////////////////////////////////////
 
-chargeBar = min(CHARGE_BAR_MAX, chargeBar + RECHARGE_RATE)
-if (chargeBar == CHARGE_BAR_MAX) {
-	forceRecharge = false;	
+if (isMoving) {
+	chargeBar = min(CHARGE_BAR_MAX, chargeBar + RECHARGE_RATE)
+	if (chargeBar == CHARGE_BAR_MAX) {
+		forceRecharge = false;	
+	}
 }
 
 if (key_attack && !isMovingFromAttack && chargeBar > 0 && !forceRecharge) {

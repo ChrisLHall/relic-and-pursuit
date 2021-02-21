@@ -1,1 +1,1 @@
-other.get_hit(self)
+other.get_hit(self, true, true)
