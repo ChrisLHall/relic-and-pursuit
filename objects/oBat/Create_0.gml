@@ -5,3 +5,8 @@ aggro_range = 200;
 safe_distance = 500;
 state = state.idle;
 speed_scale = 2;
+
+knockback_scale_x = 1;
+knockback_scale_y = 1;
+KNOCKBACK_CONSTANT = -4;
+KNOCKBACK_RECOVERY = .15;

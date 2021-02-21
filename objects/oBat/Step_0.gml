@@ -19,14 +19,21 @@ function swoop() {
 	}
 
 	dir = point_direction(x, y, Player.x, Player.y - Player.sprite_height / 2);
-	x += dcos(dir) * speed_scale;
-	y -= dsin(dir) * speed_scale;
+	dist = point_distance(x, y, Player.x, Player.y - Player.sprite_height / 2);
+	if (dist > 2 * speed_scale) {
+		x += dcos(dir) * speed_scale * knockback_scale_x;
+		y -= dsin(dir) * speed_scale * knockback_scale_y;
+	}
 	
 	// Reverse direction if necessary
 	if ((abs(Player.x - oBat.x) > turn_distance) && (sign(Player.x - oBat.x) == -hdir)) {
 		hdir = -hdir;
 		image_xscale *= -1
 	}
+	
+	// Recover from knockback
+	knockback_scale_x = min(knockback_scale_x + KNOCKBACK_RECOVERY, 1);
+	knockback_scale_y = min(knockback_scale_y + KNOCKBACK_RECOVERY, 1);
 }
 
 switch (state) {
