@@ -51,7 +51,7 @@ function gohome() {
 		y -= dsin(dir) * speed_scale;
 	} else {
 		// made it home
-		state = state.idle
+		state = batstates.idle
 	}	
 	
 	// Reverse direction if necessary

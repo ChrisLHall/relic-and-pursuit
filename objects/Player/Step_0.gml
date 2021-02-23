@@ -44,8 +44,11 @@ if (!dead) {
 			while (!check_for_wall(x, y + sign(ySpeed), true)) {
 				y += sign(ySpeed);	
 			}
-			inAir = false;
-			doubleJumped = false;
+			if (ySpeed > 0) {
+				// landed
+				inAir = false;
+				doubleJumped = false;
+			}
 			ySpeed = 0;
 		} else {
 			y += ySpeed;
