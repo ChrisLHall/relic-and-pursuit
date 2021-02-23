@@ -83,6 +83,8 @@ x = round(x)
 y = round(y)
 
 camera_set_view_pos(view_camera[0], x - 180, y - 240)
+audio_listener_position(x, y, 0)
+audio_listener_orientation(0, 0, 1, 0, -1, 0)
 
 // Animation and facing ////////////////////////////////////
 

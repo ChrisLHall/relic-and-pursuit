@@ -53,7 +53,7 @@
     "spriteId": {"name":"FloatyShoot","path":"sprites/FloatyShoot/FloatyShoot.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 4.0,
+    "playbackSpeed": 12.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

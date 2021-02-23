@@ -5,7 +5,7 @@ function idle() {
 	}
 	if (distance_to_object(Player) < aggro_range) {
 		state = batstates.swoop; // Switch states
-		audio_play_sound(bat_aggro, 10, false)
+		audio_play_sound_at(bat_aggro, x, y, 0, 200, 400, 1, false, 15)
 	}
 }
 

@@ -1,10 +1,12 @@
 {
   "resources": [
+    {"id":{"name":"floaty_shoot","path":"sounds/floaty_shoot/floaty_shoot.yy",},"order":10,},
     {"id":{"name":"bboxer_aggro","path":"sounds/bboxer_aggro/bboxer_aggro.yy",},"order":6,},
     {"id":{"name":"event1","path":"sounds/event1/event1.yy",},"order":9,},
     {"id":{"name":"BBoxer_Teleport","path":"sprites/BBoxer_Teleport/BBoxer_Teleport.yy",},"order":10,},
     {"id":{"name":"micrometroidvania0x72_v2","path":"sprites/micrometroidvania0x72_v2/micrometroidvania0x72_v2.yy",},"order":0,},
     {"id":{"name":"Hit","path":"sprites/Hit/Hit.yy",},"order":7,},
+    {"id":{"name":"FloatyProjectile","path":"sprites/FloatyProjectile/FloatyProjectile.yy",},"order":3,},
     {"id":{"name":"sUpgradeReceived","path":"sprites/sUpgradeReceived/sUpgradeReceived.yy",},"order":7,},
     {"id":{"name":"Bat","path":"sprites/Bat/Bat.yy",},"order":0,},
     {"id":{"name":"Run","path":"sprites/Run/Run.yy",},"order":0,},
@@ -26,6 +28,7 @@
     {"id":{"name":"oUpgrade","path":"objects/oUpgrade/oUpgrade.yy",},"order":4,},
     {"id":{"name":"SpikesAreaSprite","path":"sprites/SpikesAreaSprite/SpikesAreaSprite.yy",},"order":8,},
     {"id":{"name":"oBat","path":"objects/oBat/oBat.yy",},"order":2,},
+    {"id":{"name":"FloatyHover","path":"sprites/FloatyHover/FloatyHover.yy",},"order":4,},
     {"id":{"name":"oDrawText","path":"objects/oDrawText/oDrawText.yy",},"order":5,},
     {"id":{"name":"Swing","path":"sprites/Swing/Swing.yy",},"order":5,},
     {"id":{"name":"BBoxer_Wake","path":"sprites/BBoxer_Wake/BBoxer_Wake.yy",},"order":13,},
@@ -51,6 +54,7 @@
     {"id":{"name":"DeathFloorSprite","path":"sprites/DeathFloorSprite/DeathFloorSprite.yy",},"order":14,},
     {"id":{"name":"long_swipe","path":"sounds/long_swipe/long_swipe.yy",},"order":4,},
     {"id":{"name":"WallSprite","path":"sprites/WallSprite/WallSprite.yy",},"order":2,},
+    {"id":{"name":"oFloatyGuyAttack","path":"objects/oFloatyGuyAttack/oFloatyGuyAttack.yy",},"order":9,},
     {"id":{"name":"Distant_Horizon","path":"sounds/Distant_Horizon/Distant_Horizon.yy",},"order":0,},
     {"id":{"name":"Idle","path":"sprites/Idle/Idle.yy",},"order":1,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
