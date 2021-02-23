@@ -57,15 +57,22 @@ if (!dead) {
 		ySpeed = 0;
 		// if we hold the "drop" key, do not include one-way colliders
 		if (!check_for_wall(x, y + 1, !key_drop)) {
+			if (jumpBuffer == 0) {
+				jumpBuffer = 5;
+			}
 			inAir = true;
 		}
 	}
 
-	if (key_jump and (!inAir or (unlocks[1] and !doubleJumped))) {
+	if (key_jump and ((!inAir or jumpBuffer > 0) or (unlocks[1] and !doubleJumped))) {
 		if (!inAir) {
 			inAir = true;
 		} else {
-			doubleJumped = true;	
+			if (jumpBuffer > 0) {
+				jumpBuffer = 0;
+			} else {
+				doubleJumped = true;
+			}
 		}
 		ySpeed = JUMP_SPEED;
 	}
@@ -143,3 +150,4 @@ if (keyboard_check(vk_f8)) {
 	game_end();
 }
 
+jumpBuffer = max(0, jumpBuffer - 1);

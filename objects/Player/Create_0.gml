@@ -57,6 +57,7 @@ RUN_SPRITE = Run
 LEAP_SPRITE = Leap
 FALL_SPRITE = Fall
 
+jumpBuffer = 0;
 
 function check_for_wall(xPos, yPos, includeOneWay) {
 	if (place_meeting(xPos, yPos, oWallBase)) {
