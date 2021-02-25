@@ -143,11 +143,19 @@ if (isMoving) {
 	invulnRemaining -= 1	
 }
 
+jumpBuffer = max(0, jumpBuffer - 1);
 
+
+// TODO REMOVE THESE
+
+if (keyboard_check(vk_f6)) {
+	unlocks[0] = true
+	unlocks[1] = true
+	unlocks[2] = true
+	unlocks[3] = true
+}
 
 
 if (keyboard_check(vk_f8)) {
 	game_end();
 }
-
-jumpBuffer = max(0, jumpBuffer - 1);

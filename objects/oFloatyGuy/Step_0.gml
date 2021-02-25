@@ -19,6 +19,8 @@ function patrol() {
 		state = floatystates.aggro; // Switch states
 		sprite_index = FloatyHover
 		audio_play_sound_at(floaty_aggro, x, y, 0, 200, 400, 1, false, 15)
+		// start floaty hum
+		audio_play_sound_at(floaty_hum, x, y, 0, 200, 400, 1, true, 10)
 		
 		if (Player.x < x) {
 			image_xscale = -1
@@ -39,6 +41,8 @@ function aggro() {
 		state = floatystates.shoot
 		sprite_index = FloatyShoot
 		image_index = 0
+		// stop floaty hum
+		audio_stop_sound(floaty_hum)
 	}
 }
 

@@ -45,9 +45,9 @@ unlocks[1] = false
 unlocks[2] = false
 unlocks[3] = false
 // 0 - drop
-// 1 - double jump?
-// 2 - fast recharge
-// 3 - ?sup?er? ?att??ac?k??
+// 1 - double jump
+// 2 - big attack
+// 3 - fast recharge???
 
 
 
