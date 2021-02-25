@@ -32,7 +32,7 @@ function set_state(newState) {
 	} else if (newState == babystates.waking) {
 		sprite_index = BBoxer_Wake
 	} else if (newState == babystates.idle) {
-		//sprite_index = BBoxer_Idle
+		sprite_index = BBoxer_Idle
 	} else if (newState == babystates.attack) {
 		sprite_index = BBoxer_Attack
 	}

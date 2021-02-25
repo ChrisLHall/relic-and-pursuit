@@ -104,6 +104,7 @@ if (Player.isMoving) {
 }
 
 // move
+/*
 if (Player.isMoving) {
 	var newX = x
 	var newY = y
@@ -135,6 +136,7 @@ if (Player.isMoving) {
 		knockbackY = 0
 	}
 }
+*/
 
 // sleep, waking, idle, attack, teleport, die };
 // state machine
