@@ -2,7 +2,11 @@
 // You can write your code in this editor
 depth = 5;
 
-RAISE_TIMER = 120;
-COLLAPSE_TIMER = 0;
+isRaising = true; // starts going up
+currentTimer = 120;
 
-DECRE
+RAISE_SPRITE = sPlatformRaise
+COLLAPSE_SPRITE = sPlatformCollapse
+
+raised = false;
+bufferTimer = 0;
