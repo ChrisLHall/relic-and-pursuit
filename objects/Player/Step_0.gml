@@ -127,7 +127,7 @@ if (isMoving) {
 }
 
 if (key_attack && !dead && !isMovingFromAttack && chargeBar > 0 && !forceRecharge) {
-	var attack = instance_create_layer(x, y, layer, attack_obj)
+	var attack = instance_create_layer(x + 18 * sign(image_xscale), y - 12, layer, attack_obj)
 	attack.image_xscale = image_xscale
 	
 	isMovingFromAttack = true

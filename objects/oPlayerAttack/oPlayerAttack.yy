@@ -1,11 +1,14 @@
 {
   "spriteId": {
-    "name": "Slash",
-    "path": "sprites/Slash/Slash.yy",
+    "name": "slasher",
+    "path": "sprites/slasher/slasher.yy",
   },
   "solid": false,
   "visible": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "SlasherCollide",
+    "path": "sprites/SlasherCollide/SlasherCollide.yy",
+  },
   "persistent": false,
   "parentObjectId": null,
   "physicsObject": false,
