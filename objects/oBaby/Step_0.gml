@@ -1,9 +1,6 @@
 function sleep() {
 	if (distance_to_object(Player) < aggro_range) {
 		set_state(babystates.waking)
-		stateTimer = 0
-		state = floatystates.aggro; // Switch states
-		sprite_index = FloatyHover
 		audio_play_sound_at(bboxer_aggro, x, y, 0, 200, 400, 1, false, 15)
 	}
 }
@@ -21,7 +18,9 @@ function attack() {
 }
 
 function teleport() {
-	
+	if stateTimer == TELEPORT_DELAY {
+		// TODO teleport somewhere	
+	}
 }
 
 function die() {
