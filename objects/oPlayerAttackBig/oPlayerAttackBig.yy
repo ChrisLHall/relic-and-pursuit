@@ -5,7 +5,10 @@
   },
   "solid": false,
   "visible": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "SlasherCollide",
+    "path": "sprites/SlasherCollide/SlasherCollide.yy",
+  },
   "persistent": false,
   "parentObjectId": null,
   "physicsObject": false,
