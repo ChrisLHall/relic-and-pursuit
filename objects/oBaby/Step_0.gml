@@ -1,5 +1,5 @@
 function sleep() {
-	if (distance_to_object(Player) < aggro_range) {
+	if (distance_to_object(Player) < AGGRO_RANGE) {
 		set_state(babystates.waking)
 		audio_play_sound_at(bboxer_aggro, x, y, 0, 200, 400, 1, false, 15)
 	}
@@ -10,16 +10,33 @@ function waking() {
 }
 
 function idle() {
+	if (Player.x > x + TURN_AROUND_DIST) {
+		image_xscale = 1
+	} else if (Player.x < x - TURN_AROUND_DIST) {
+		image_xscale = -1
+	}
 	
+	if stateTimer > IDLE_STATE_TIME {
+		set_state(babystates.attack)	
+	}
 }
 
 function attack() {
-	
+	if stateTimer == ATTACK_DELAY {
+		var swipe = instance_create_layer(x, y, layer, oBabyAttack)
+		swipe.image_xscale = image_xscale
+	}
 }
 
 function teleport() {
 	if stateTimer == TELEPORT_DELAY {
-		// TODO teleport somewhere	
+		teleport_somewhere()
+		// face the player
+		if (Player.x > x) {
+			image_xscale = 1
+		} else if (Player.x < x) {
+			image_xscale = -1
+		}
 	}
 }
 

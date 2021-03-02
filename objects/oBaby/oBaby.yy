@@ -6,8 +6,8 @@
   "solid": false,
   "visible": true,
   "spriteMaskId": {
-    "name": "PlayerCollisionMask",
-    "path": "sprites/PlayerCollisionMask/PlayerCollisionMask.yy",
+    "name": "BBoxerMask",
+    "path": "sprites/BBoxerMask/BBoxerMask.yy",
   },
   "persistent": false,
   "parentObjectId": {
@@ -30,7 +30,6 @@
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"oBaby","path":"objects/oBaby/oBaby.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"oBaby","path":"objects/oBaby/oBaby.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"oPlayerAttack","path":"objects/oPlayerAttack/oPlayerAttack.yy",},"parent":{"name":"oBaby","path":"objects/oBaby/oBaby.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"oBaby","path":"objects/oBaby/oBaby.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":7,"eventType":7,"collisionObjectId":null,"parent":{"name":"oBaby","path":"objects/oBaby/oBaby.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
