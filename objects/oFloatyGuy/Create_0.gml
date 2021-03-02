@@ -31,3 +31,5 @@ knockbackX = 0;
 knockbackY = 0;
 KNOCKBACK_CONSTANT = 8;
 KNOCKBACK_RECOVERY = .2;
+
+HIT_SOUND = floaty_hit
