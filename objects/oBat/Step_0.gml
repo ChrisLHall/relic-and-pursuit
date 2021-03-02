@@ -23,8 +23,8 @@ function swoop() {
 	}
 	
 	// Reverse direction if necessary
-	if ((abs(Player.x - oBat.x) > turn_distance) && (-sign(Player.x - oBat.x) != image_xscale)) {
-		image_xscale = -sign(Player.x - oBat.x)
+	if ((abs(Player.x - x) > turn_distance) && (-sign(Player.x - x) != image_xscale)) {
+		image_xscale = -sign(Player.x - x)
 	}
 	
 	// Recover from knockback
