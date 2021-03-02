@@ -115,7 +115,7 @@ if (!dead) {
 // Attack //////////////////////////////////////
 
 if (isMoving) {
-	chargeBar = min(CHARGE_BAR_MAX, chargeBar + RECHARGE_RATE)
+	chargeBar = min(CHARGE_BAR_MAX, chargeBar + (RECHARGE_RATE * (1 + unlocks[2])))
 	if (chargeBar == CHARGE_BAR_MAX) {
 		forceRecharge = false;	
 	}
