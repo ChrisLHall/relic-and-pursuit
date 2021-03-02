@@ -6,5 +6,6 @@ if (other.can_hit() && !invulnerable) {
 	} else {
 		invulnerable = true
 		alarm_set(0, 20)
+		alarm_set(1, 5)
 	}
 }
