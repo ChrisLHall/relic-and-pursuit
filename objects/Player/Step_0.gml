@@ -4,11 +4,6 @@ key_jump = keyboard_check_pressed(vk_up);
 key_drop = keyboard_check(vk_down) and unlocks[0];
 key_attack = keyboard_check_pressed(vk_space);
 
-attack_obj = oPlayerAttack;
-if (unlocks[2]) {
-	attack_obj = oPlayerAttackBig;
-}
-
 // Movement //////////////////////////////////////
 
 var move = key_right - key_left;
@@ -127,8 +122,9 @@ if (isMoving) {
 }
 
 if (key_attack && !dead && !isMovingFromAttack && chargeBar > 0 && !forceRecharge) {
-	var attack = instance_create_layer(x + 18 * sign(image_xscale), y - 12, layer, attack_obj)
-	attack.image_xscale = image_xscale
+	var attack = instance_create_layer(x + 18 * sign(image_xscale), y - 12, layer, oPlayerAttack)
+	attack.image_xscale = image_xscale + (unlocks[2] * sign(image_xscale) * 0.5)
+	attack.image_yscale = image_yscale + (unlocks[2] * 0.1)
 	
 	isMovingFromAttack = true
 	alarm_set(1, 15)
