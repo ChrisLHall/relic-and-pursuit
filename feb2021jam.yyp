@@ -78,6 +78,7 @@
     {"id":{"name":"Distant_Horizon","path":"sounds/Distant_Horizon/Distant_Horizon.yy",},"order":0,},
     {"id":{"name":"Idle","path":"sprites/Idle/Idle.yy",},"order":1,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
+    {"id":{"name":"oBaby","path":"objects/oBaby/oBaby.yy",},"order":11,},
   ],
   "Options": [
     {"name":"Main","path":"options/main/options_main.yy",},
