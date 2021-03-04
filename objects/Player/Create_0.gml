@@ -29,6 +29,9 @@ INVULN_TIME = 80
 blinkOn = true
 invulnRemaining = 0
 
+step = 0;
+last_known_pos = [-1, -1];
+
 dead = false
 
 chargeBar = 1

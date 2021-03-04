@@ -13,4 +13,5 @@ knockback_scale_y = 1;
 KNOCKBACK_CONSTANT = -4;
 KNOCKBACK_RECOVERY = .15;
 
-HIT_SOUND = bat_hit
+HIT_SOUND = bat_hit;
+DEATH_SOUND = basic_death;

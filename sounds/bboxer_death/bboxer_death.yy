@@ -1,6 +1,6 @@
 {
   "compression": 0,
-  "volume": 0.2,
+  "volume": 0.4,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "floaty_hit.wav",
-  "duration": 0.134274,
+  "soundFile": "bboxer_death.wav",
+  "duration": 1.833912,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "floaty_hit",
+  "name": "bboxer_death",
   "tags": [],
   "resourceType": "GMSound",
 }
