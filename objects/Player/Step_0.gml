@@ -66,6 +66,12 @@ if (!dead) {
 			if (jumpBuffer > 0) {
 				jumpBuffer = 0;
 			} else {
+				// TODO: make double jump functions
+				inst = instance_create_layer(x, y, layer, oJumpCloud);
+				with (inst) {
+					image_xscale = Player.image_xscale;
+					SPEED = Player.xSpeed;
+				}
 				audio_play_sound(dolby_digital_jump_deeper, 100, false)
 				doubleJumped = true;
 			}
