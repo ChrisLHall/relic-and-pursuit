@@ -37,13 +37,17 @@ function teleport() {
 		} else if (Player.x < x) {
 			image_xscale = -1
 		}
-		
-		if random(1) < .5 {
-			var energy = instance_create_layer(x, y, layer, oBabyEnergyAttack)
-			energy.xSpeed = 5
-			energy = instance_create_layer(x, y, layer, oBabyEnergyAttack)
-			energy.xSpeed = -5
-		}
+	}
+	
+	if stateTimer == ENERGY_BALL_DELAY {
+		var energy = instance_create_layer(x, y - 20, layer, oBabyEnergyAttack)
+		//energy.xSpeed = random_range(5, 10)
+		energy.ySpeed = random_range(-8, -5)
+		energy.targetX = Player.x
+		energy.targetY = Player.y - 16
+		//energy = instance_create_layer(x, y - 8, layer, oBabyEnergyAttack)
+		//energy.xSpeed = random_range(-10, -5)
+		//energy.ySpeed = random_range(-8, -3)
 	}
 }
 
