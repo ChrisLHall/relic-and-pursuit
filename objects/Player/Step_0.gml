@@ -49,6 +49,10 @@ if (!dead) {
 			y += ySpeed;
 		}
 	} else {
+		if (step mod 10 == 0) {
+			last_known_pos[0] = x;
+			last_known_pos[1] = y;
+		}
 		ySpeed = 0;
 		// if we hold the "drop" key, do not include one-way colliders
 		if (!check_for_wall(x, y + 1, !key_drop)) {
@@ -161,4 +165,10 @@ if (keyboard_check(vk_f6)) {
 
 if (keyboard_check(vk_f8)) {
 	game_end();
+}
+
+// increment step
+step += 1
+if (step == 60) {
+	step = 0;
 }
