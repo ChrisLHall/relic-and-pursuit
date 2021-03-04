@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"dolby_digital_jump_deeper","path":"sounds/dolby_digital_jump_deeper/dolby_digital_jump_deeper.yy",},"order":17,},
     {"id":{"name":"floaty_shoot","path":"sounds/floaty_shoot/floaty_shoot.yy",},"order":10,},
     {"id":{"name":"bboxer_aggro","path":"sounds/bboxer_aggro/bboxer_aggro.yy",},"order":6,},
     {"id":{"name":"sPlatformCollapse","path":"sprites/sPlatformCollapse/sPlatformCollapse.yy",},"order":18,},
