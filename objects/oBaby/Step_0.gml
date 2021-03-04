@@ -37,6 +37,13 @@ function teleport() {
 		} else if (Player.x < x) {
 			image_xscale = -1
 		}
+		
+		if random(1) < .5 {
+			var energy = instance_create_layer(x, y, layer, oBabyEnergyAttack)
+			energy.xSpeed = 5
+			energy = instance_create_layer(x, y, layer, oBabyEnergyAttack)
+			energy.xSpeed = -5
+		}
 	}
 }
 

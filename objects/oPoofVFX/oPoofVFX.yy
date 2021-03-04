@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sPulseVFX",
-    "path": "sprites/sPulseVFX/sPulseVFX.yy",
+    "name": "sPoofVFX",
+    "path": "sprites/sPoofVFX/sPoofVFX.yy",
   },
   "solid": false,
   "visible": true,
@@ -31,7 +31,7 @@
     "path": "folders/Objects/VFX.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oPulseVFX",
+  "name": "oPoofVFX",
   "tags": [],
   "resourceType": "GMObject",
 }
