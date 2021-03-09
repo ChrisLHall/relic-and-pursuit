@@ -84,8 +84,10 @@
     {"id":{"name":"oFloatyGuyAttack","path":"objects/oFloatyGuyAttack/oFloatyGuyAttack.yy",},"order":9,},
     {"id":{"name":"oFloatyGuyAttack","path":"objects/oFloatyGuyAttack/oFloatyGuyAttack.yy",},"order":9,},
     {"id":{"name":"Distant_Horizon","path":"sounds/Distant_Horizon/Distant_Horizon.yy",},"order":0,},
+    {"id":{"name":"shit_vfx","path":"sprites/shit_vfx/shit_vfx.yy",},"order":2,},
     {"id":{"name":"Idle","path":"sprites/Idle/Idle.yy",},"order":1,},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
+    {"id":{"name":"oHitCloud","path":"objects/oHitCloud/oHitCloud.yy",},"order":15,},
     {"id":{"name":"oBaby","path":"objects/oBaby/oBaby.yy",},"order":11,},
   ],
   "Options": [
