@@ -22,6 +22,9 @@ function idle() {
 }
 
 function attack() {
+	if stateTimer == ATTACK_SOUND_DELAY {
+		audio_play_sound(bboxer_chargeup_sound, 15, false)	
+	}
 	if stateTimer == ATTACK_DELAY {
 		var swipe = instance_create_layer(x, y, layer, oBabyAttack)
 		swipe.image_xscale = image_xscale
@@ -37,17 +40,6 @@ function teleport() {
 		} else if (Player.x < x) {
 			image_xscale = -1
 		}
-	}
-	
-	if stateTimer == ENERGY_BALL_DELAY {
-		var energy = instance_create_layer(x, y - 20, layer, oBabyEnergyAttack)
-		//energy.xSpeed = random_range(5, 10)
-		energy.ySpeed = random_range(-8, -5)
-		energy.targetX = Player.x
-		energy.targetY = Player.y - 16
-		//energy = instance_create_layer(x, y - 8, layer, oBabyEnergyAttack)
-		//energy.xSpeed = random_range(-10, -5)
-		//energy.ySpeed = random_range(-8, -3)
 	}
 }
 
