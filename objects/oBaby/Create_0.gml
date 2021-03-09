@@ -13,6 +13,7 @@ angry = false
 TURN_AROUND_DIST = 30
 IDLE_STATE_TIME = 50
 
+ATTACK_SOUND_DELAY = 6
 ATTACK_DELAY = 48
 TELEPORT_DELAY = 45
 ENERGY_BALL_DELAY = 55
@@ -75,4 +76,5 @@ function teleport_somewhere() {
 		x = destX
 		y = destY
 	}
+	audio_play_sound(bboxer_teleport_sound, 15, false)
 }

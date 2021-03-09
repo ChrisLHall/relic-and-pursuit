@@ -22,6 +22,9 @@ function idle() {
 }
 
 function attack() {
+	if stateTimer == ATTACK_SOUND_DELAY {
+		audio_play_sound(bboxer_chargeup_sound, 15, false)	
+	}
 	if stateTimer == ATTACK_DELAY {
 		var swipe = instance_create_layer(x, y, layer, oBabyAttack)
 		swipe.image_xscale = image_xscale
