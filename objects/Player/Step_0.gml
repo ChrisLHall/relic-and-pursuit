@@ -49,7 +49,8 @@ if (!dead) {
 			y += ySpeed;
 		}
 	} else {
-		if (step mod 10 == 0) {
+		// Save last known position, but not on one-way walls
+		if (step mod 10 == 0 && check_for_wall(x, y + 1, false)) {
 			last_known_pos[0] = x;
 			last_known_pos[1] = y;
 		}
