@@ -6,8 +6,8 @@
   "solid": false,
   "visible": true,
   "spriteMaskId": {
-    "name": "PlayerCollisionMask",
-    "path": "sprites/PlayerCollisionMask/PlayerCollisionMask.yy",
+    "name": "sFloatyCollisionMask",
+    "path": "sprites/sFloatyCollisionMask/sFloatyCollisionMask.yy",
   },
   "persistent": false,
   "parentObjectId": {
