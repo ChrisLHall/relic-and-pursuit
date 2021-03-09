@@ -153,6 +153,12 @@ if (isMoving) {
 
 jumpBuffer = max(0, jumpBuffer - 1);
 
+// increment step
+step += 1
+if (step == 60) {
+	step = 0;
+}
+
 
 // TODO REMOVE THESE
 
@@ -168,8 +174,6 @@ if (keyboard_check(vk_f8)) {
 	game_end();
 }
 
-// increment step
-step += 1
-if (step == 60) {
-	step = 0;
+if (keyboard_check(vk_f9)) {
+	room_goto_next();
 }

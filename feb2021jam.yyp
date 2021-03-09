@@ -13,6 +13,7 @@
     {"id":{"name":"Hit","path":"sprites/Hit/Hit.yy",},"order":7,},
     {"id":{"name":"FloatyProjectile","path":"sprites/FloatyProjectile/FloatyProjectile.yy",},"order":3,},
     {"id":{"name":"sUpgradeReceived","path":"sprites/sUpgradeReceived/sUpgradeReceived.yy",},"order":7,},
+    {"id":{"name":"RoomCredits","path":"rooms/RoomCredits/RoomCredits.yy",},"order":1,},
     {"id":{"name":"sDoubleJump","path":"sprites/sDoubleJump/sDoubleJump.yy",},"order":25,},
     {"id":{"name":"Bat","path":"sprites/Bat/Bat.yy",},"order":0,},
     {"id":{"name":"Run","path":"sprites/Run/Run.yy",},"order":0,},
@@ -49,6 +50,7 @@
     {"id":{"name":"Swing","path":"sprites/Swing/Swing.yy",},"order":5,},
     {"id":{"name":"BBoxer_Wake","path":"sprites/BBoxer_Wake/BBoxer_Wake.yy",},"order":13,},
     {"id":{"name":"Player","path":"objects/Player/Player.yy",},"order":0,},
+    {"id":{"name":"fnt_monogram_smol","path":"fonts/fnt_monogram_smol/fnt_monogram_smol.yy",},"order":1,},
     {"id":{"name":"BBoxerMask","path":"sprites/BBoxerMask/BBoxerMask.yy",},"order":21,},
     {"id":{"name":"Push","path":"sprites/Push/Push.yy",},"order":4,},
     {"id":{"name":"BBoxer_Sleep","path":"sprites/BBoxer_Sleep/BBoxer_Sleep.yy",},"order":12,},
@@ -88,6 +90,7 @@
     {"id":{"name":"oFloatyGuyAttack","path":"objects/oFloatyGuyAttack/oFloatyGuyAttack.yy",},"order":9,},
     {"id":{"name":"oFloatyGuyAttack","path":"objects/oFloatyGuyAttack/oFloatyGuyAttack.yy",},"order":9,},
     {"id":{"name":"bboxer_chargeup_sound","path":"sounds/bboxer_chargeup_sound/bboxer_chargeup_sound.yy",},"order":21,},
+    {"id":{"name":"oCredits","path":"objects/oCredits/oCredits.yy",},"order":16,},
     {"id":{"name":"Distant_Horizon","path":"sounds/Distant_Horizon/Distant_Horizon.yy",},"order":0,},
     {"id":{"name":"shit_vfx","path":"sprites/shit_vfx/shit_vfx.yy",},"order":2,},
     {"id":{"name":"Idle","path":"sprites/Idle/Idle.yy",},"order":1,},
@@ -108,6 +111,7 @@
   },
   "RoomOrderNodes": [
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"RoomCredits","path":"rooms/RoomCredits/RoomCredits.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
