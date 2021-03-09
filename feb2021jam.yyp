@@ -62,6 +62,7 @@
     {"id":{"name":"oPoofVFX","path":"objects/oPoofVFX/oPoofVFX.yy",},"order":1,},
     {"id":{"name":"ambiancebass","path":"sounds/ambiancebass/ambiancebass.yy",},"order":8,},
     {"id":{"name":"BackgroundTileSet","path":"tilesets/BackgroundTileSet/BackgroundTileSet.yy",},"order":0,},
+    {"id":{"name":"oBabyEnergyAttackComplicated","path":"objects/oBabyEnergyAttackComplicated/oBabyEnergyAttackComplicated.yy",},"order":15,},
     {"id":{"name":"BBoxer_Sheet","path":"sprites/BBoxer_Sheet/BBoxer_Sheet.yy",},"order":3,},
     {"id":{"name":"Death","path":"sprites/Death/Death.yy",},"order":8,},
     {"id":{"name":"FloatyShoot","path":"sprites/FloatyShoot/FloatyShoot.yy",},"order":2,},

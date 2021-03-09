@@ -2,7 +2,10 @@ glowPhase += 20
 image_alpha = .7 + dcos(glowPhase) * .3
 
 if Player.isMoving {
-	/*
+	// first slow down
+	xSpeed -= SLOW_FACTOR * xSpeed
+	ySpeed -= SLOW_FACTOR * ySpeed
+	
 	// now accelerate towards target
 	var xOffset = dcos(randomOffsetAngle)
 	var yOffset = -dsin(randomOffsetAngle)
@@ -18,11 +21,6 @@ if Player.isMoving {
 		xSpeed *= (TOP_SPEED / currentSpeed)
 		ySpeed *= (TOP_SPEED / currentSpeed)
 	}
-	*/
-	
-	// todo see if this is anything
-	xSpeed *= ACCEL_FACTOR
-	ySpeed *= ACCEL_FACTOR
 	
 	x += xSpeed
 	y += ySpeed

@@ -80,7 +80,7 @@
     "spriteId": {"name":"BBoxer_Attack","path":"sprites/BBoxer_Attack/BBoxer_Attack.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 20.0,
+    "playbackSpeed": 14.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

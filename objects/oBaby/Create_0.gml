@@ -2,7 +2,7 @@ event_inherited()
 
 enum babystates { sleep, waking, idle, attack, teleport, die };
 
-hp = 4
+hp = 6
 
 AGGRO_RANGE = 60;
 CHASE_RANGE = 120;
@@ -13,7 +13,7 @@ angry = false
 TURN_AROUND_DIST = 30
 IDLE_STATE_TIME = 50
 
-ATTACK_DELAY = 32
+ATTACK_DELAY = 48
 TELEPORT_DELAY = 45
 ENERGY_BALL_DELAY = 55
 TELEPORT_X_DIST = 80
@@ -29,6 +29,7 @@ KNOCKBACK_CONSTANT = 8;
 KNOCKBACK_RECOVERY = .2;
 
 HIT_SOUND = bboxer_hit;
+DEATH_SOUND = bboxer_death;
 
 function set_state(newState) {
 	state = newState

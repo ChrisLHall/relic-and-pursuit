@@ -9,6 +9,8 @@ if state == babystates.waking {
 	}
 } else if state == babystates.teleport {
 	set_state(babystates.idle)
+	var energy = instance_create_layer(x, y - 20, layer, oBabyEnergyAttack)
+	energy.start_moving_towards(Player.x, Player.y - 20)
 } else if state == babystates.die {
 	instance_destroy(self)
 }
