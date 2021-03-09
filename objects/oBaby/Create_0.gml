@@ -4,7 +4,7 @@ enum babystates { sleep, waking, idle, attack, teleport, die };
 
 hp = 6
 
-AGGRO_RANGE = 60;
+AGGRO_RANGE = 180;
 CHASE_RANGE = 120;
 state = babystates.sleep;
 stateTimer = 0
@@ -59,8 +59,6 @@ function teleport_somewhere() {
 		destX = Player.x + TELEPORT_X_DIST
 	}
 	
-	show_debug_message("teleporting")
-	
 	var foundSomewhere = false
 	// search for a y destination that is on the ground
 	var destY = Player.y - TELEPORT_Y_DIST
@@ -68,7 +66,6 @@ function teleport_somewhere() {
 		if !(place_meeting(destX, checkY, oWallBase) or place_meeting(destX, checkY, oWallOneWay)) and (place_meeting(destX, checkY + 1, oWallBase) or place_meeting(destX, checkY + 1, oWallOneWay)) {
 			destY = checkY
 			foundSomewhere = true
-			show_debug_message("found dest y " + string(destY))
 		}
 	}
 	
