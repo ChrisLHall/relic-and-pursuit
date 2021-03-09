@@ -34,6 +34,8 @@ last_known_pos = [-1, -1];
 
 dead = false
 
+EMBUSH = false;
+
 chargeBar = 1
 // if you use up all your power you have to wait
 forceRecharge = false 
