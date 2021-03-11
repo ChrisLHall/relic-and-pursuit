@@ -19,7 +19,7 @@ function swoop() {
 	dist = point_distance(x, y, Player.x, Player.y - Player.sprite_height / 2);
 	if (dist > 2 * speed_scale) {
 		x += dcos(dir) * speed_scale * knockback_scale_x;
-		y -= dsin(dir) * speed_scale * knockback_scale_y;
+		y -= dsin(dir) * speed_scale * knockback_scale_y * 1.5;
 	}
 	
 	// Reverse direction if necessary

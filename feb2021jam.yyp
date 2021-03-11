@@ -56,6 +56,7 @@
     {"id":{"name":"BBoxer_Sleep","path":"sprites/BBoxer_Sleep/BBoxer_Sleep.yy",},"order":12,},
     {"id":{"name":"oEnemyBase","path":"objects/oEnemyBase/oEnemyBase.yy",},"order":8,},
     {"id":{"name":"oPlatform","path":"objects/oPlatform/oPlatform.yy",},"order":10,},
+    {"id":{"name":"oHealthPickup","path":"objects/oHealthPickup/oHealthPickup.yy",},"order":18,},
     {"id":{"name":"bboxer_hit","path":"sounds/bboxer_hit/bboxer_hit.yy",},"order":15,},
     {"id":{"name":"bboxer_teleport_sound","path":"sounds/bboxer_teleport_sound/bboxer_teleport_sound.yy",},"order":20,},
     {"id":{"name":"oBabyEnergyAttack","path":"objects/oBabyEnergyAttack/oBabyEnergyAttack.yy",},"order":14,},

@@ -78,6 +78,9 @@ function check_for_wall(xPos, yPos, includeOneWay) {
 	return false;
 }
 
+function add_hp(amount) {
+	hp = min(HP_MAX, hp + amount)	
+}
 
 function get_hit(attacker, doXKnockback, doYKnockback) {
 	if (!is_invulnerable() && !dead) {

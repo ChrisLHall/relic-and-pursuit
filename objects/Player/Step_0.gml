@@ -82,6 +82,7 @@ if (!dead) {
 			}
 		}
 		ySpeed = JUMP_SPEED;
+		alarm_set(1, 15)
 	}
 } else {
 	// if dead
@@ -92,6 +93,7 @@ if (!dead) {
 }
 
 isMoving = (xSpeed != 0) or (ySpeed != 0) or isMovingFromAttack
+//isMoving = true
 
 x = round(x)
 y = round(y)
