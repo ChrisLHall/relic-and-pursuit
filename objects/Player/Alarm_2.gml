@@ -6,4 +6,6 @@ audio_sound_gain(ambiancebass, 0.25, 1);
 audio_sound_gain(controlroom, 0.1, 1);
 audio_sound_gain(event1, 0.1, 1);
 
+audio_sound_gain(strangecorporation, 0, 400);
+
 game_restart()
