@@ -8,5 +8,6 @@ if (sprite_index == Death) {
 	with (inst) {
 		STRING = "GAME OVER."
 	}
-	alarm_set(2, 300)
+	
+	alarm_set(2, 330)
 }

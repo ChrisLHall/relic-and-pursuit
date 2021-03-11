@@ -1,2 +1,2 @@
-TIMER = 300;
+TIMER = 330;
 ALPHA = 0;

@@ -100,6 +100,18 @@ function get_hit(attacker, doXKnockback, doYKnockback) {
 			dead = true
 			invulnRemaining = 0
 			chargeBar = CHARGE_BAR_MAX
+			// fade music out
+			audio_sound_gain(Distant_Horizon, 0, 400);
+			audio_sound_gain(ambiancebass, 0, 400);
+			audio_sound_gain(controlroom, 0, 400);
+			audio_sound_gain(event1, 0, 400);
+			audio_sound_gain(embush_loop, 0, 400);
+	
+			audio_sound_gain(strangecorporation, 0, 0);
+			audio_play_sound(strangecorporation, 15, false);
+			audio_sound_gain(strangecorporation, 0.25, 900);
+	
+			audio_play_sound(death_woops, 15, false);
 			// game restarts after this anim finishes
 			sprite_index = Death
 			image_index = 0
