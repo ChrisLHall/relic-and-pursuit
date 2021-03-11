@@ -86,6 +86,7 @@ function get_hit(attacker, doXKnockback, doYKnockback) {
 	if (!is_invulnerable() && !dead) {
 		hp = max(0, hp - attacker.DAMAGE)
 		if (hp > 0) {
+			audio_play_sound(player_hit, 15, false);
 			if (doXKnockback) {
 				xKnockback = X_KNOCKBACK_SPEED * sign(x - attacker.x)
 			}
