@@ -1,6 +1,7 @@
 key_left = keyboard_check(vk_left);
 key_right = keyboard_check(vk_right);
 key_jump = keyboard_check_pressed(vk_up);
+key_pass_time = keyboard_check(vk_down)
 key_drop = keyboard_check(vk_down) and unlocks[0];
 key_attack = keyboard_check_pressed(vk_space);
 
@@ -92,8 +93,8 @@ if (!dead) {
 	ySpeed = 0
 }
 
-isMoving = (xSpeed != 0) or (ySpeed != 0) or isMovingFromAttack
-//isMoving = true
+// isMoving = key_pass_time or xSpeed != 0 or ySpeed != 0 or isMovingFromAttack
+ isMoving = true
 
 x = round(x)
 y = round(y)
