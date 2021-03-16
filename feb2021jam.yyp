@@ -50,6 +50,7 @@
     {"id":{"name":"oDrawText","path":"objects/oDrawText/oDrawText.yy",},"order":5,},
     {"id":{"name":"Swing","path":"sprites/Swing/Swing.yy",},"order":5,},
     {"id":{"name":"BBoxer_Wake","path":"sprites/BBoxer_Wake/BBoxer_Wake.yy",},"order":13,},
+    {"id":{"name":"jumpp","path":"sounds/jumpp/jumpp.yy",},"order":33,},
     {"id":{"name":"Player","path":"objects/Player/Player.yy",},"order":0,},
     {"id":{"name":"fnt_monogram_smol","path":"fonts/fnt_monogram_smol/fnt_monogram_smol.yy",},"order":1,},
     {"id":{"name":"BBoxerMask","path":"sprites/BBoxerMask/BBoxerMask.yy",},"order":21,},
