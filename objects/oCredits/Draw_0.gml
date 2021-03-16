@@ -10,5 +10,8 @@ draw_set_valign(fa_top);
 //draw_text_ext(x, y + 2, STRING, 20, 300);
 //draw_text_ext(x, y - 2, STRING, 20, 300);
 
+draw_set_alpha(0);
 draw_set_colour($CDD8E0);
+progress += 1;
+draw_set_alpha(progress * DRAW_SPEED);
 draw_text_ext(x, y, STRING, 16, 300);

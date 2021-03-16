@@ -56,6 +56,8 @@ unlocks[3] = false
 
 wonGame = false;
 wonGameTimerStarted = false;
+//credits
+transition_progress = 0;
 
 // Animation
 IDLE_SPRITE = Idle
