@@ -56,6 +56,9 @@ unlocks[3] = false
 
 wonGame = false;
 wonGameTimerStarted = false;
+bboxerAnimFinished = 0;
+//credits
+transition_progress = 0;
 
 // Animation
 IDLE_SPRITE = Idle

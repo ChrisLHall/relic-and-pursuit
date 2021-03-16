@@ -1,3 +1,6 @@
+progress = 0;
+DRAW_SPEED = 0.04;
+
 STRING = "PROGRAMMING AND DESIGN:\n"
 if random(1) < .5 {
 	STRING += "Panic Stevenson and Chris Hall\n\n"
