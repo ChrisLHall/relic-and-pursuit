@@ -20,7 +20,8 @@ if (wonGame) {
 	key_jump = false;
 	key_left = false;
 	key_right = false;
-	if (!wonGameTimerStarted) {
+	chargeBar = CHARGE_BAR_MAX;
+	if (bboxerAnimFinished > 30 && !wonGameTimerStarted) {
 		audio_sound_gain(Distant_Horizon, 0, 2500);
 		audio_sound_gain(ambiancebass, 0, 2500);
 		audio_sound_gain(controlroom, 0, 2500);
@@ -33,6 +34,8 @@ if (wonGame) {
 		wonGameTimerStarted = true;
 		alarm_set(3, 300);
 	}
+	// TODO: Terrible jank pseudo alarm
+	bboxerAnimFinished += 1;
 }
 
 if (!dead) {

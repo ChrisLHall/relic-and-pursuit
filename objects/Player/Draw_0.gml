@@ -30,7 +30,6 @@ if (wonGame) {
 	transition_progress += 1;
 	draw_set_color(c_black);
 	var progress = max(0, transition_progress - 210);
-	show_debug_message(progress/90);
 	draw_set_alpha(progress/90);
 	draw_rectangle(0, 0, 5000, 3000, 0);
 	//draw_rectangle(0, 0, display_get_gui_width(), display_get_gui_height(), false);
