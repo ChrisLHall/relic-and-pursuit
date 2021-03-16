@@ -1,5 +1,5 @@
 glowPhase += 20
-image_alpha = .7 + dcos(glowPhase) * .3
+//image_alpha = .7 + dcos(glowPhase) * .3
 
 if Player.isMoving {
 	/*
