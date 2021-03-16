@@ -106,6 +106,9 @@ if (!dead) {
 				doubleJumped = true;
 			}
 		}
+		if (!doubleJumped) {
+			audio_play_sound(jumpp, 100, false);
+		}
 		ySpeed = JUMP_SPEED;
 		alarm_set(1, 15)
 	}
