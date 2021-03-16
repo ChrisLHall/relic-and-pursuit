@@ -54,7 +54,8 @@ unlocks[3] = false
 // 2 - big attack
 // 3 - fast recharge???
 
-
+wonGame = false;
+wonGameTimerStarted = false;
 
 // Animation
 IDLE_SPRITE = Idle
@@ -124,4 +125,6 @@ function is_invulnerable() {
 	return invulnRemaining > 0
 }
 
+audio_sound_gain(Distant_Horizon, 0, 0);
 audio_play_sound(Distant_Horizon, 10, true);
+audio_sound_gain(Distant_Horizon, 0.15, 400);

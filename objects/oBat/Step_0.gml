@@ -69,3 +69,7 @@ switch (state) {
 	case batstates.swoop: swoop(); break;
 	case batstates.gohome: gohome(); break;
 }
+
+if (Player.EMBUSH) {
+	instance_destroy(self);
+}
