@@ -97,6 +97,7 @@
     {"id":{"name":"BBoxer_Idle","path":"sprites/BBoxer_Idle/BBoxer_Idle.yy",},"order":19,},
     {"id":{"name":"player_hit","path":"sounds/player_hit/player_hit.yy",},"order":29,},
     {"id":{"name":"long_swipe","path":"sounds/long_swipe/long_swipe.yy",},"order":4,},
+    {"id":{"name":"RoomTitle","path":"rooms/RoomTitle/RoomTitle.yy",},"order":2,},
     {"id":{"name":"WallSprite","path":"sprites/WallSprite/WallSprite.yy",},"order":2,},
     {"id":{"name":"oFloatyGuyAttack","path":"objects/oFloatyGuyAttack/oFloatyGuyAttack.yy",},"order":9,},
     {"id":{"name":"oFloatyGuyAttack","path":"objects/oFloatyGuyAttack/oFloatyGuyAttack.yy",},"order":9,},
@@ -125,6 +126,7 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"RoomCredits","path":"rooms/RoomCredits/RoomCredits.yy",},},
+    {"roomId":{"name":"RoomTitle","path":"rooms/RoomTitle/RoomTitle.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
