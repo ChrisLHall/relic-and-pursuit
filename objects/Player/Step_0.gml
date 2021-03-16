@@ -11,6 +11,30 @@ var move = key_right - key_left;
 var tryingToRun = key_right || key_left;
 xSpeed = move * WALK_SPEED + xKnockback;
 
+// NO MORE PLAYING THE GAME WHEN YOU WON
+
+if (wonGame) {
+	move = 0;
+	tryingToRun = false;
+	xSpeed = 0;
+	key_jump = false;
+	key_left = false;
+	key_right = false;
+	if (!wonGameTimerStarted) {
+		audio_sound_gain(Distant_Horizon, 0, 2500);
+		audio_sound_gain(ambiancebass, 0, 2500);
+		audio_sound_gain(controlroom, 0, 2500);
+		audio_sound_gain(event1, 0, 2500);
+		audio_sound_gain(embush_loop, 0, 2500);
+		inst = instance_create_layer(x, y, layer, oDrawText);
+		with (inst) {
+			STRING = "YOU BURNED THE ROPE!";
+		}
+		wonGameTimerStarted = true;
+		alarm_set(3, 300);
+	}
+}
+
 if (!dead) {
 	//x = x + xSpeed
 	if (check_for_wall(x + xSpeed, y, true)) {
@@ -178,5 +202,5 @@ if (keyboard_check(vk_f8)) {
 }
 
 if (keyboard_check(vk_f9)) {
-	room_goto_next();
+	wonGame = true;
 }

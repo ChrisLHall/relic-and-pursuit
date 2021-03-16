@@ -64,6 +64,7 @@
     {"id":{"name":"BBoxerAttackMask","path":"sprites/BBoxerAttackMask/BBoxerAttackMask.yy",},"order":23,},
     {"id":{"name":"WallSpriteOneWay","path":"sprites/WallSpriteOneWay/WallSpriteOneWay.yy",},"order":4,},
     {"id":{"name":"bat_hit","path":"sounds/bat_hit/bat_hit.yy",},"order":14,},
+    {"id":{"name":"spaceship1","path":"sounds/spaceship1/spaceship1.yy",},"order":30,},
     {"id":{"name":"sHealthPip","path":"sprites/sHealthPip/sHealthPip.yy",},"order":5,},
     {"id":{"name":"BBoxer_Die","path":"sprites/BBoxer_Die/BBoxer_Die.yy",},"order":11,},
     {"id":{"name":"WallSpriteEmbush","path":"sprites/WallSpriteEmbush/WallSpriteEmbush.yy",},"order":26,},
