@@ -3,7 +3,7 @@
 if Player.isMoving {
 	timeCounter += 1
 }
-y = ystart - dsin(timeCounter * FLOAT_FREQ) * FLOAT_PIXELS
+y = (ystart - FLOAT_PIXELS) - dsin(timeCounter * FLOAT_FREQ) * (FLOAT_PIXELS * 2)
 
 if place_meeting(x, y, Player) {
 	instance_destroy(self)
