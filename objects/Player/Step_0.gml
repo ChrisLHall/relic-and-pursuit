@@ -9,7 +9,7 @@ key_attack = keyboard_check_pressed(vk_space);
 
 var move = key_right - key_left;
 var tryingToRun = key_right || key_left;
-xSpeed = move * WALK_SPEED + xKnockback;
+xSpeed = move * min(WALK_SPEED + xKnockback, 8);
 
 // NO MORE PLAYING THE GAME WHEN YOU WON
 
