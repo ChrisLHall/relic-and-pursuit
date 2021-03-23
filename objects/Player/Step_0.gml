@@ -59,7 +59,7 @@ if (!dead) {
 
 
 	if (inAir) {
-		ySpeed = clamp(ySpeed + GRAV, -TERMINAL_VELOCITY, TERMINAL_VELOCITY);
+		ySpeed = clamp(ySpeed + GRAV, -10, TERMINAL_VELOCITY);
 		// if we hold the "drop" key, do not include one-way colliders
 		if (check_for_wall(x, y + ySpeed, !key_drop)) {
 			// grid align

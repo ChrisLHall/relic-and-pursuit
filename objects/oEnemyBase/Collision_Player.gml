@@ -1,2 +1,4 @@
 // hit the player unless the player just hit me
-other.get_hit(self, true, true)
+if (can_do_damage) {
+	other.get_hit(self, true, true);
+}
