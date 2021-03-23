@@ -5,9 +5,10 @@ lifeTimer = irandom_range(100, 200)
 ACCEL_FACTOR = 1.008
 START_SPEED = 2
 
+depth = -20
+
 xSpeed = 0
 ySpeed = 0
-
 
 randomOffsetAngle = random_range(0, 360)
 randomOffsetSpeed = random_range(-5, 5)
