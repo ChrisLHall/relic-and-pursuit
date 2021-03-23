@@ -191,22 +191,3 @@ step += 1
 if (step == 60) {
 	step = 0;
 }
-
-
-// TODO REMOVE THESE
-
-if (keyboard_check(vk_f6)) {
-	unlocks[0] = true
-	unlocks[1] = true
-	unlocks[2] = true
-	unlocks[3] = true
-}
-
-
-if (keyboard_check(vk_f8)) {
-	game_end();
-}
-
-if (keyboard_check(vk_f9)) {
-	wonGame = true;
-}
