@@ -41,11 +41,17 @@ function teleport() {
 			image_xscale = -1
 		}
 	}
+	if (stateTimer == (TELEPORT_SOUND_1_DELAY - TELEPORT_BUFFER)) {
+		can_do_damage = false;
+	}
 	if stateTimer == TELEPORT_SOUND_1_DELAY {
 		audio_play_sound(bboxer_tp_1, 15, false)
 	}
 	if stateTimer == TELEPORT_SOUND_2_DELAY {
 		audio_play_sound(bboxer_tp_2, 15, false)
+	}
+	if (stateTimer == (TELEPORT_SOUND_2_DELAY + TELEPORT_BUFFER)) {
+		can_do_damage = true;
 	}
 }
 

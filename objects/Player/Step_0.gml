@@ -9,7 +9,7 @@ key_attack = keyboard_check_pressed(vk_space);
 
 var move = key_right - key_left;
 var tryingToRun = key_right || key_left;
-xSpeed = move * WALK_SPEED + xKnockback;
+xSpeed = move * min(WALK_SPEED + xKnockback, 8);
 
 // NO MORE PLAYING THE GAME WHEN YOU WON
 
@@ -27,10 +27,10 @@ if (wonGame) {
 		audio_sound_gain(controlroom, 0, 2500);
 		audio_sound_gain(event1, 0, 2500);
 		audio_sound_gain(embush_loop, 0, 2500);
-		inst = instance_create_layer(x, y, layer, oDrawText);
-		with (inst) {
-			STRING = "YOU BURNED THE ROPE!";
-		}
+//		inst = instance_create_layer(x, y, layer, oDrawText);
+//		with (inst) {
+//			STRING = "YOU GOT ALL THEM UPGRADES AND KILLED BABY BOXER. HAPPY NOW? ... UNLESS?";
+//		}
 		wonGameTimerStarted = true;
 		alarm_set(3, 300);
 	}
@@ -59,7 +59,7 @@ if (!dead) {
 
 
 	if (inAir) {
-		ySpeed = min(TERMINAL_VELOCITY, ySpeed + GRAV);
+		ySpeed = clamp(ySpeed + GRAV, -10, TERMINAL_VELOCITY);
 		// if we hold the "drop" key, do not include one-way colliders
 		if (check_for_wall(x, y + ySpeed, !key_drop)) {
 			// grid align
@@ -190,23 +190,4 @@ jumpBuffer = max(0, jumpBuffer - 1);
 step += 1
 if (step == 60) {
 	step = 0;
-}
-
-
-// TODO REMOVE THESE
-
-if (keyboard_check(vk_f6)) {
-	unlocks[0] = true
-	unlocks[1] = true
-	unlocks[2] = true
-	unlocks[3] = true
-}
-
-
-if (keyboard_check(vk_f8)) {
-	game_end();
-}
-
-if (keyboard_check(vk_f9)) {
-	wonGame = true;
 }

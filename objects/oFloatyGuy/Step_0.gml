@@ -39,8 +39,9 @@ function aggro() {
 	if (stateTimer > AGGRO_STATE_TIME) {
 		stateTimer = 0
 		state = floatystates.shoot
-		sprite_index = FloatyShoot
-		image_index = 0
+		// ==== RIP floaty guy shoot animation
+		// sprite_index = FloatyShoot
+		// image_index = 0
 		// stop floaty hum
 		audio_stop_sound(floaty_hum)
 	}

@@ -1,5 +1,5 @@
 /// @description hit sound
-cloud = instance_create_layer(other.x + 18 * sign(other.image_xscale), y, layer, oHitCloud)
+cloud = instance_create_layer((other.x + x) / 2, (other.y + y) / 2, layer, oHitCloud)
 with (cloud) {
 	if (other.x > x) {
 		image_xscale *= -1;
