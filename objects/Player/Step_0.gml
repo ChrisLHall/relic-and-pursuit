@@ -29,7 +29,7 @@ if (wonGame) {
 		audio_sound_gain(embush_loop, 0, 2500);
 		inst = instance_create_layer(x, y, layer, oDrawText);
 		with (inst) {
-			STRING = "YOU BURNED THE ROPE!";
+			STRING = "YOU GOT ALL THEM UPGRADES AND KILLED BABY BOXER. HAPPY NOW? ... UNLESS?";
 		}
 		wonGameTimerStarted = true;
 		alarm_set(3, 300);
@@ -59,7 +59,7 @@ if (!dead) {
 
 
 	if (inAir) {
-		ySpeed = min(TERMINAL_VELOCITY, ySpeed + GRAV);
+		ySpeed = clamp(ySpeed + GRAV, -TERMINAL_VELOCITY, TERMINAL_VELOCITY);
 		// if we hold the "drop" key, do not include one-way colliders
 		if (check_for_wall(x, y + ySpeed, !key_drop)) {
 			// grid align
