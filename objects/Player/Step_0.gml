@@ -27,10 +27,10 @@ if (wonGame) {
 		audio_sound_gain(controlroom, 0, 2500);
 		audio_sound_gain(event1, 0, 2500);
 		audio_sound_gain(embush_loop, 0, 2500);
-		inst = instance_create_layer(x, y, layer, oDrawText);
-		with (inst) {
-			STRING = "YOU GOT ALL THEM UPGRADES AND KILLED BABY BOXER. HAPPY NOW? ... UNLESS?";
-		}
+//		inst = instance_create_layer(x, y, layer, oDrawText);
+//		with (inst) {
+//			STRING = "YOU GOT ALL THEM UPGRADES AND KILLED BABY BOXER. HAPPY NOW? ... UNLESS?";
+//		}
 		wonGameTimerStarted = true;
 		alarm_set(3, 300);
 	}
