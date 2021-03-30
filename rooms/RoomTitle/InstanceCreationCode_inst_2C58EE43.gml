@@ -1,1 +1,1 @@
-STRING = " Jump"
+STRING = "Jump"

@@ -1,1 +1,1 @@
-STRING = " Move"
+STRING = "Move"

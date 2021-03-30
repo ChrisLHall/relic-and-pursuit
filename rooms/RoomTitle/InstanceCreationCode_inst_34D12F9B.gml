@@ -1,1 +1,1 @@
-STRING = " Attack"
+STRING = "Attack"

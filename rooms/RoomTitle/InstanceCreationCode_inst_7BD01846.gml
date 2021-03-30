@@ -1,1 +1,1 @@
-STRING = " Drop (Unlockable)"
+STRING = "Drop (Unlockable)"
