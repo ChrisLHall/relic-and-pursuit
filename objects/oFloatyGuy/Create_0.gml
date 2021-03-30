@@ -4,7 +4,8 @@ enum floatystates { patrol, aggro, shoot };
 
 hp = 4
 
-aggro_range = 240;
+aggro_range_x = 240;
+aggro_range_y = 80;
 state = floatystates.patrol;
 speed_scale = 4;
 patrol_angle = random(360)
