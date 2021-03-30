@@ -129,6 +129,8 @@ function is_invulnerable() {
 	return invulnRemaining > 0
 }
 
+audio_sound_gain(spaceship1, 0, 1000);
+audio_stop_sound(spaceship1);
 audio_sound_gain(Distant_Horizon, 0, 0);
 audio_play_sound(Distant_Horizon, 10, true);
 audio_sound_gain(Distant_Horizon, 0.15, 400);
