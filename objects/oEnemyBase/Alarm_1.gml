@@ -1,7 +1,7 @@
 /// @description hit sound
-cloud = instance_create_layer((other.x + x) / 2, (other.y + y) / 2, layer, oHitCloud)
+cloud = instance_create_layer((oPlayerAttack.x + x) / 2, (oPlayerAttack.y + y) / 2 + HIT_Y_OFFSET, layer, oHitCloud)
 with (cloud) {
-	if (other.x > x) {
+	if (oPlayerAttack.x > x) {
 		image_xscale *= -1;
 	}
 }
