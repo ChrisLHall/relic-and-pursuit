@@ -170,7 +170,7 @@ if (isMoving) {
 if (key_attack && !dead && !isMovingFromAttack && chargeBar > 0 && !forceRecharge) {
 	sprite_index = SWING_SPRITE
 	image_index = 0
-	var attack = instance_create_layer(x + 18 * sign(image_xscale), y - 12, layer, oPlayerAttack)
+	var attack = instance_create_layer(x + 24 * sign(image_xscale), y - 12, layer, oPlayerAttack)
 	attack.image_xscale = image_xscale + (unlocks[2] * sign(image_xscale) * 0.5)
 	attack.image_yscale = image_yscale + (unlocks[2] * 0.1)
 	
