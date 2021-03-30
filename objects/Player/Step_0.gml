@@ -20,6 +20,7 @@ if (wonGame) {
 	key_jump = false;
 	key_left = false;
 	key_right = false;
+	key_attack = false;
 	chargeBar = CHARGE_BAR_MAX;
 	if (bboxerAnimFinished > 30 && !wonGameTimerStarted) {
 		audio_sound_gain(Distant_Horizon, 0, 2500);
