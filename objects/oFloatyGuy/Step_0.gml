@@ -14,7 +14,7 @@ function patrol() {
 		image_xscale = -1
 	}
 	
-	if (stateTimer > PATROL_STATE_TIME and distance_to_object(Player) < aggro_range) {
+	if (stateTimer > PATROL_STATE_TIME and abs(Player.x - x) < aggro_range_x and abs(Player.y - y) < aggro_range_y) {
 		stateTimer = 0
 		state = floatystates.aggro; // Switch states
 		sprite_index = FloatyHover
