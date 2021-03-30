@@ -10,3 +10,5 @@ BLINK_INTERVAL = 5
 blinkOn = true
 
 can_do_damage = true;
+
+HIT_Y_OFFSET = 0;
