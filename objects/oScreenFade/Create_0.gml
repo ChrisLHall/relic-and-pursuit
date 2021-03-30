@@ -1,3 +1,5 @@
+depth = -1000
+
 alphaTarget = 0
 image_alpha = 1
 fadeSpeed = .015
