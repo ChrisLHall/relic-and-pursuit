@@ -1,4 +1,4 @@
-/// @description Stop death animation and restart
+/// @description death or swing
 
 if (sprite_index == Death) {
 	image_speed = 0
@@ -10,4 +10,7 @@ if (sprite_index == Death) {
 	}
 	
 	alarm_set(2, 330)
+} else if (sprite_index == SWING_SPRITE) {
+	sprite_index = IDLE_SPRITE
+	image_index = 0
 }

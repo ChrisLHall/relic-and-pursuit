@@ -65,6 +65,7 @@ IDLE_SPRITE = Idle
 RUN_SPRITE = Run
 LEAP_SPRITE = Leap
 FALL_SPRITE = Fall
+SWING_SPRITE = Swing
 
 jumpBuffer = 0;
 
