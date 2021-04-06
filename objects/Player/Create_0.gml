@@ -129,6 +129,15 @@ function is_invulnerable() {
 	return invulnRemaining > 0
 }
 
+function get_upgrade_at_index(index) {
+    with (oUpgrade) {
+        if UPGRADE_INDEX == index {
+            return self
+        }
+    }
+    return noone
+}
+
 audio_sound_gain(spaceship1, 0, 1000);
 audio_stop_sound(spaceship1);
 audio_sound_gain(Distant_Horizon, 0, 0);

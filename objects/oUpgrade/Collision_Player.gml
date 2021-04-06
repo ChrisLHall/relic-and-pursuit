@@ -1,4 +1,5 @@
 if (!UPGRADE_RECEIVED) {
+	Player.hp = Player.HP_MAX;
 	inst = instance_create_layer(x, y, layer, oDrawText);
 	audio_play_sound(snd_upgrade, 11, false);
 	var cachedSelf = self;
