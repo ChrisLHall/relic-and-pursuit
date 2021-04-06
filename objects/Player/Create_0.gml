@@ -22,7 +22,7 @@ Y_KNOCKBACK_SPEED = 4;
 isMoving = false;
 isMovingFromAttack = false;
 
-HP_MAX = 4
+HP_MAX = 3
 hp = HP_MAX
 BLINK_INTERVAL = 5
 INVULN_TIME = 80
