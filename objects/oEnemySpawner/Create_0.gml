@@ -4,7 +4,7 @@ spawned = false;
 
 spawn_type = oBat;
 
-instance = false;
+instance = noone;
 triggered_respawn = false;
 
 playerWasDead = false;
