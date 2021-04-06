@@ -1,2 +1,2 @@
-UPGRADE_INDEX = 1;
+UPGRADE_INDEX = 0;
 spawn_type = oFloatyGuy;

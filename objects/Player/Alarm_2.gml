@@ -13,6 +13,7 @@ audio_sound_gain(event1, 0.1, 400);
 	
 audio_stop_sound(strangecorporation);
 audio_stop_sound(death_woops);
+audio_stop_sound(embush_loop);
 
 
 if (unlocks[2]) {

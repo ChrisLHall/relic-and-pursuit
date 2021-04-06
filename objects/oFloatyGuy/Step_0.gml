@@ -113,6 +113,6 @@ switch (state) {
 	case floatystates.shoot: shoot(); break;
 }
 
-if (Player.EMBUSH) {
-	instance_destroy(self);
-}
+//if (Player.EMBUSH) {
+//	instance_destroy(self);
+//}

@@ -110,7 +110,6 @@
     {"id":{"name":"RoomTitle","path":"rooms/RoomTitle/RoomTitle.yy",},"order":2,},
     {"id":{"name":"WallSprite","path":"sprites/WallSprite/WallSprite.yy",},"order":2,},
     {"id":{"name":"oFloatyGuyAttack","path":"objects/oFloatyGuyAttack/oFloatyGuyAttack.yy",},"order":9,},
-    {"id":{"name":"oFloatyGuyAttack","path":"objects/oFloatyGuyAttack/oFloatyGuyAttack.yy",},"order":9,},
     {"id":{"name":"oDrawSimpleText","path":"objects/oDrawSimpleText/oDrawSimpleText.yy",},"order":20,},
     {"id":{"name":"oWallEmbush","path":"objects/oWallEmbush/oWallEmbush.yy",},"order":17,},
     {"id":{"name":"bboxer_chargeup_sound","path":"sounds/bboxer_chargeup_sound/bboxer_chargeup_sound.yy",},"order":21,},

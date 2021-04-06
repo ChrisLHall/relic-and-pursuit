@@ -70,6 +70,6 @@ switch (state) {
 	case batstates.gohome: gohome(); break;
 }
 
-if (Player.EMBUSH) {
-	instance_destroy(self);
-}
+//if (Player.EMBUSH) {
+//	instance_destroy(self);
+//}
