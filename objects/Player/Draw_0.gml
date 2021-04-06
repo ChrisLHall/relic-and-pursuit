@@ -18,7 +18,7 @@ if (chargeBar < CHARGE_BAR_MAX) {
 }
 
 
-var PIP_SPACING = 30
+var PIP_SPACING = 40
 for (var i = 0; i < HP_MAX; i++) {
 	var yOffset = 0 + 2 * blinkOn;
 	draw_sprite_ext(sHealthPip, hp > i, x - PIP_SPACING * (-(HP_MAX - 1) / 2 + i), y + 60 + yOffset, 2, 2, 0, c_white, 1)
