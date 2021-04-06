@@ -3,7 +3,7 @@ function idle() {
 	if (!Player.isMoving) {
 		return;
 	}
-	if (distance_to_object(Player) < aggro_range) {
+	if (!Player.dead && distance_to_object(Player) < aggro_range) {
 		state = batstates.swoop; // Switch states
 		audio_play_sound_at(bat_aggro, x, y, 0, 200, 400, 1, false, 15)
 	}
@@ -32,7 +32,7 @@ function swoop() {
 	knockback_scale_y = min(knockback_scale_y + KNOCKBACK_RECOVERY, 1);
 	
 	// give up if too far away
-	if (dist > safe_distance) {
+	if (dist > safe_distance || Player.dead) {
 		state = batstates.gohome;
 		knockback_scale_x = 1;
 		knockback_scale_y = 1;
