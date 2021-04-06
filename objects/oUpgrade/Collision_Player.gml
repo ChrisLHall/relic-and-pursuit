@@ -12,4 +12,5 @@ if (!UPGRADE_RECEIVED) {
 	audio_sound_gain(SOUNDS[UPGRADE_INDEX], 0, 0);
 	audio_play_sound(SOUNDS[UPGRADE_INDEX], 12, true);
 	audio_sound_gain(SOUNDS[UPGRADE_INDEX], cacheGain, 15000); // 15 seconds
+	alarm_set(0, 3);
 }

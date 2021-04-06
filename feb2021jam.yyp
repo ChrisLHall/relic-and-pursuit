@@ -96,6 +96,7 @@
     {"id":{"name":"Floaty","path":"sprites/Floaty/Floaty.yy",},"order":1,},
     {"id":{"name":"strangecorporation","path":"sounds/strangecorporation/strangecorporation.yy",},"order":26,},
     {"id":{"name":"bboxer_tp_1","path":"sounds/bboxer_tp_1/bboxer_tp_1.yy",},"order":30,},
+    {"id":{"name":"oScreenFlash","path":"objects/oScreenFlash/oScreenFlash.yy",},"order":27,},
     {"id":{"name":"sPlatformRaise","path":"sprites/sPlatformRaise/sPlatformRaise.yy",},"order":17,},
     {"id":{"name":"floaty_aggro","path":"sounds/floaty_aggro/floaty_aggro.yy",},"order":7,},
     {"id":{"name":"PlayerCollisionMask","path":"sprites/PlayerCollisionMask/PlayerCollisionMask.yy",},"order":9,},
